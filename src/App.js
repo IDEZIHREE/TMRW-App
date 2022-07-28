@@ -9,6 +9,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <h1>hello</h1>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="chat" element={<Chat />} />
