@@ -2,6 +2,8 @@ import React from 'react';
 import { Routes, Route, Link } from "react-router-dom";
 import './App.css';
 import Header from './Header';
+import Footer from './Footer';
+import TinderCards from './TinderCards';
 
 function App() {
   return (
@@ -11,25 +13,21 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="chat" element={<Chat />} />
       </Routes>
-
+      <Footer />
     </div>
   );
 }
 
 function Home() {
   return (
-    <>
       <main>
-        <h2>Welcome to the homepage!</h2>
-        <p>You can do this, I believe in you.</p>
+        <TinderCards />
       </main>
-    </>
   );
 }
 
 function Chat() {
   return (
-    <>
       <main>
         <h2>Who are we?</h2>
         <p>
@@ -37,7 +35,6 @@ function Chat() {
           think?
         </p>
       </main>
-    </>
   );
 }
 
