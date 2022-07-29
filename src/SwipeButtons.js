@@ -9,7 +9,7 @@ import "./SwipeButtons.css";
 
 const SwipeButtons = () => {
     return (
-        <div className="swipebuttons">
+        <div className="swipeButtons">
             <IconButton className="swipeButtons_repeat">
                 <ReplayIcon fontSize="large" />
             </IconButton>
