@@ -3,8 +3,12 @@ import { Routes, Route, Link } from "react-router-dom";
 import './App.css';
 import Header from './Header';
 import Footer from './Footer';
+import Chats from "./Chats";
+import ChatScreen from "./ChatScreen";
 import TinderCards from './TinderCards';
 import SwipeButtons from './SwipeButtons';
+import Profile from "./Profile";
+
 
 function App() {
   return (
@@ -13,10 +17,20 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="chat" element={<Chat />} />
+        <Route path="chat/:person" element={<ChatScreenFunction />} />
+        <Route path="profile" element={<Profile />} />
       </Routes>
       <Footer />
     </div>
   );
+}
+
+function Chat () {
+  return (
+    <main>
+      <Chats />
+    </main>
+  )
 }
 
 function Home() {
@@ -28,16 +42,22 @@ function Home() {
   );
 }
 
-function Chat() {
+
+function ChatScreenFunction() {
   return (
       <main>
-        <h2>Who are we?</h2>
-        <p>
-          That feels like an existential question, don't you
-          think?
-        </p>
+        <ChatScreen />
       </main>
   );
 }
+
+function Profile () {
+  return (
+    <main>
+
+    </main>
+  );
+}
+
 
 export default App;

@@ -3,7 +3,7 @@
     width: 500px; /* STATIC */
     padding: 20px; /* STATIC */
     max-width: 85vw;
-    height: 50vh;
+    height: 70vh;
     border-radius: 10px;
     background-size: cover;
     background-position: center;
@@ -11,8 +11,15 @@
 
 .card > h3 {
     position: absolute;
-    bottom: 10px; /*STATIC*/
+    bottom: 25px; /*STATIC*/
     color: white; 
+}
+
+.card > h4 {
+    position: absolute;
+    bottom: 5px;
+    color: lightgray;
+    margin-left: 25px;
 }
 
 .tinderCards_cardContainer {
@@ -23,4 +30,11 @@
 
 .swipe {
     position: absolute;
+}
+
+.location_icon {
+    position: absolute;
+    bottom: 3px;
+    padding: 10;
+    color: #ff5349;
 }

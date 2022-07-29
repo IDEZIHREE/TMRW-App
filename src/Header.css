@@ -5,7 +5,7 @@
 }
 
 .HeaderIcon {
-    padding: 20px; /* STATIC */
+    padding: 10px; /* STATIC */
     color:rgb(61, 61, 61)
 }
 
@@ -15,4 +15,7 @@
 
 .Title {
     color:#FF5349;
+    flex: 1;
+    text-align: center;
+    margin-left: 50px;
 }
