@@ -2,7 +2,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid rgb(0, 0, 0);
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -15,8 +14,4 @@
 .titleIcon {
     padding: 10px; /* STATIC */
     color:rgb(61, 61, 61)
-}
-
-.titleIcon:active {
-    color:#FF5349;
 }

@@ -56,7 +56,7 @@ function ChatScreen () {
                         placeholder="Type a message..." 
                         type="text"
                     />
-                    <button onClick={handleSend} type="submit" className="chatScreen_inputButton">SEND</button>
+                    <button onClick={handleSend} type="submit" className="chatScreen_inputButton">Send</button>
                 </form>
             </div>   
     );

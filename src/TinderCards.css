@@ -1,9 +1,9 @@
 .card {
     position: relative;
     width: 500px; /* STATIC */
-    padding: 20px; /* STATIC */
+    padding: 20px;
     max-width: 85vw;
-    height: 70vh;
+    height: 56vh;
     border-radius: 10px;
     background-size: cover;
     background-position: center;
@@ -11,13 +11,13 @@
 
 .card > h3 {
     position: absolute;
-    bottom: 25px; /*STATIC*/
+    bottom: 60px; /*STATIC*/
     color: white; 
 }
 
 .card > h4 {
     position: absolute;
-    bottom: 5px;
+    bottom: 40px;
     color: lightgray;
     margin-left: 25px;
 }
@@ -34,7 +34,7 @@
 
 .location_icon {
     position: absolute;
-    bottom: 3px;
+    bottom: 38px;
     padding: 10;
     color: #ff5349;
 }

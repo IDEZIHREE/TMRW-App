@@ -5,7 +5,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Chats from "./Chats";
 import ChatScreen from "./ChatScreen";
-import TinderCards from './TinderCards';
+import TinderCardsNew from './TinderCardsNew';
 import SwipeButtons from './SwipeButtons';
 import Profile from "./Profile";
 
@@ -18,7 +18,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="chat" element={<Chat />} />
         <Route path="chat/:person" element={<ChatScreenFunction />} />
-        <Route path="profile" element={<Profile />} />
+        <Route path="profilePage" element={<ProfilePage />} />
       </Routes>
       <Footer />
     </div>
@@ -36,7 +36,7 @@ function Chat () {
 function Home() {
   return (
       <main>
-        <TinderCards />
+        <TinderCardsNew />
         <SwipeButtons />
       </main>
   );
@@ -51,7 +51,7 @@ function ChatScreenFunction() {
   );
 }
 
-function Profile () {
+function ProfilePage () {
   return (
     <main>
 
