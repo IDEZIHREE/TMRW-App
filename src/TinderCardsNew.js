@@ -1,6 +1,8 @@
 import React from "react";
 import "./Tinder-Cards.css";
 import Hammer from "hammerjs";
+import Header from './Header';
+import Footer from './Footer';
 
 function TinderCardsNew() {
 
@@ -212,13 +214,14 @@ function TinderCardsNew() {
 
     const board = document.querySelector('.board')
 
-    const carousel = new Carousel(board)
+    //const carousel = new Carousel(board)
 
 
 
     return (
             <div className="board">
-               
+               <Header />
+               <Footer />
             </div>
 
     )

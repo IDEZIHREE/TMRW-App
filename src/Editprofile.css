@@ -1,0 +1,69 @@
+.editprofileheader{
+  color: white;
+  text-align: center;
+  border-bottom: 1px solid grey;
+
+}
+
+.container {
+    padding: 16px;
+    background-color: #121212;
+    color: white;
+    overflow: hidden;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    height: 1vh;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+
+.exercise {
+    width: 100px;
+    height: 10vh;
+}
+
+#test {
+  display: inline-block;
+}
+
+#Popup {
+  position: absolute;
+  z-index: 0;
+  background-color: red;
+  width: 100%;
+  min-height: 60px;
+}
+
+#close {
+  width: 20px;
+  margin-left: 100px;
+  cursor: pointer;
+}
+
+#footer-container {
+  position: relative;
+  height: 60px;
+}
+
+#footer {
+  position: relative;
+  z-index: 100;
+  height: 60px;
+  background-color: blue;
+  color: white;
+  text-align: center;
+}
+
+#FooterLink {
+  cursor: pointer;
+}

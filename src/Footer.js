@@ -41,8 +41,8 @@ function Footer() {
 
     return (
         <div className="footer">
-            <Link to="/">
             <IconButton>
+            <Link to="/">
                 <NightlightRoundedIcon 
                     style={{
                         color: isActive ? '#FF5349' : '',
@@ -50,8 +50,8 @@ function Footer() {
                     className="titleIcon"
                     onClick={handleClick} 
                     fontSize="large" />
-            </IconButton>
             </Link>
+            </IconButton>
             <IconButton>
                 <FavoriteIcon 
                     style={{
@@ -61,8 +61,8 @@ function Footer() {
                     onClick={handleClick1} 
                     fontSize="large" />
             </IconButton>
-            <Link to="/chat">
             <IconButton>
+            <Link to="/chat">
                 <QuestionAnswerRoundedIcon 
                     style={{
                         color: isActive2 ? '#FF5349' : '',
@@ -70,10 +70,10 @@ function Footer() {
                     className="titleIcon"
                     onClick={handleClick2} 
                     fontSize="large" />
-            </IconButton>
             </Link>
-            <Link to="profile">
+            </IconButton>
             <IconButton>
+            <Link to="/profile">
                 <PersonIcon 
                      style={{
                         color: isActive3 ? '#FF5349' : '',
@@ -81,8 +81,8 @@ function Footer() {
                     className="titleIcon"
                     onClick={handleClick3} 
                     fontSize="large" />
-            </IconButton>
             </Link>
+            </IconButton>
         </div>
     )
 }
