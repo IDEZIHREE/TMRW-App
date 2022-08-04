@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Tinder-Cards.css";
 import Hammer from "hammerjs";
+import database from "./firebase";
 
 function TinderCardsNew() {
+
+    const [people, setPeople] = useState([]);
+
+    useEffect (() => {
+        const unsubscribe = database
+            .collection('people')
+            .onSnapshot((snapshot) => 
+            setPeople(snapshot.docs.map((doc) => doc.data()))
+        );
+        return () => {
+            unsubscribe();
+        };
+    }, []);
 
     class Carousel {
 
@@ -201,8 +215,11 @@ function TinderCardsNew() {
 
             card.classList.add('card')
 
-            card.style.backgroundImage =
-                "url('https://picsum.photos/320/320/?random=" + Math.round(Math.random() * 1000000) + "')"
+            {people.map(person => ( 
+                card.style.backgroundImage = `url(${person.url})` 
+
+            ))}
+    
 
             this.board.insertBefore(card, this.board.firstChild)
 
@@ -210,15 +227,15 @@ function TinderCardsNew() {
 
     }
 
-    const board = document.querySelector('.board')
+    const board = document.querySelector('#board')
 
     const carousel = new Carousel(board)
 
 
 
     return (
-            <div className="board">
-               
+            <div id="board">
+    
             </div>
 
     )
