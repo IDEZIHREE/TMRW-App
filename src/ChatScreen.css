@@ -15,6 +15,7 @@
     text-align: center;
     padding: 20px;
     color: rgb(109, 109, 109);
+    padding-top: 15px;
 }
 
 .chatScreen_textUser {
@@ -51,4 +52,12 @@
     margin-right: 10px;
     font-weight: bolder;
     color: #ffffff;
+}
+
+.message_image {
+    display: flex;
+    width: 100px;
+    margin: auto;
+    border-radius: 50px;
+    margin-top: 20px;
 }

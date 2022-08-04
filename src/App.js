@@ -1,26 +1,26 @@
 import React from 'react';
 import { Routes, Route, Link } from "react-router-dom";
 import './App.css';
-import Header from './Header';
-import Footer from './Footer';
 import Chats from "./Chats";
 import ChatScreen from "./ChatScreen";
 import TinderCardsNew from './TinderCardsNew';
 import SwipeButtons from './SwipeButtons';
 import Profile from "./Profile";
+import Settings from "./Settings";
+import Editprofile from './Editprofile';
 
 
 function App() {
   return (
     <div className="App">
-      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="chat" element={<Chat />} />
         <Route path="chat/:person" element={<ChatScreenFunction />} />
-        <Route path="profilePage" element={<ProfilePage />} />
+        <Route path="profile" element={<ProfilePage />} />
+        <Route path="settings" element={<SettingsPage />} />
+        <Route path="profile/:editprofile" element={<EditProfilePage />} />
       </Routes>
-      <Footer />
     </div>
   );
 }
@@ -54,10 +54,28 @@ function ChatScreenFunction() {
 function ProfilePage () {
   return (
     <main>
-
+        <Profile />
     </main>
   );
 }
+
+function SettingsPage () {
+  return (
+    <main>
+      <Settings />
+    </main>
+  );
+}
+
+function EditProfilePage () {
+  return (
+    <main>
+      <Editprofile />
+    </main>
+  );
+}
+
+
 
 
 export default App;

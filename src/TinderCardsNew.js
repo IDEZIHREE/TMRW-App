@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./Tinder-Cards.css";
 import Hammer from "hammerjs";
 import database from "./firebase";
+import Header from './Header';
+import Footer from './Footer';
 
 function TinderCardsNew() {
 
@@ -229,13 +231,17 @@ function TinderCardsNew() {
 
     const board = document.querySelector('#board')
 
-    const carousel = new Carousel(board)
+    //const carousel = new Carousel(board)
 
 
 
     return (
             <div id="board">
     
+            <div className="board">
+               <Header />
+               <Footer />
+            </div>
             </div>
 
     )

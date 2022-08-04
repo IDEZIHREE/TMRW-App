@@ -5,6 +5,7 @@
     position: fixed;
     bottom: 0;
     width: 100%;
+    border-top: 2px solid black;
 }
 
 .titleLogo {
