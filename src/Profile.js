@@ -3,6 +3,7 @@ import "./Profile.css";
 import { Link } from "react-router-dom";
 import Header from './Header';
 import "./Footer.css";
+//Icons
 import NightlightRoundedIcon from '@mui/icons-material/NightlightRounded';
 import { IconButton } from "@mui/material";
 import PersonIcon from '@mui/icons-material/Person';
@@ -14,7 +15,7 @@ function Profile ({ profilePic, name, age }) {
     return (
         <div className="profile">
           <Header />
-            <img className="profile_picture" src={profilePic} />
+            <img className="profile_picture" src={profilePic} alt="profile-pic" />
             <div className="profile_info">
                 <h2>{name}, {age}</h2>
             </div>

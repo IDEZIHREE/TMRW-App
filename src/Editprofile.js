@@ -1,19 +1,52 @@
 import React from "react";
 import "./Editprofile.css"
-import "./Popup.js";
-import { useState } from "react";
-import Popup from "./Popup.js";
+import "./Popup";
+import "./Popup.css";
 //Icons
 import SchoolIcon from '@mui/icons-material/School';
 import HouseIcon from '@mui/icons-material/House';
 import WorkIcon from '@mui/icons-material/Work';
 
+const openModalButtons = document.querySelectorAll("[data-modal-target]")
+const closeModalButtons = document.querySelectorAll("[data-close-button]")
+const overlay = document.getElementById("overlay")
+
+openModalButtons.forEach(button => {
+  button.addEventListener("click:", () => {
+    const modal = document.querySelector(button.dataset.modalTarget)
+    openModal(modal)
+  })
+})
+
+overlay.addEventListener("click", () => {
+  const modal = document.querySelectorAll(".modal.active")
+  modal.forEach(modal => {
+    closeModal(modal)
+  })
+})
+
+closeModalButtons.forEach(button => {
+  button.addEventListener("click:", () => {
+    const modal = button.closest(".modal")
+    closeModal(modal)
+  })
+})
+
+function openModal(modal) {
+  if (modal == null) return
+  modal.classList.add("active")
+  overlay.classList.add ("active")
+}
+
+function closeModal(modal) {
+  if (modal == null) return
+  modal.classList.remove("active")
+  overlay.classList.remove("active")
+}
+
+
 function Editprofile () {
-    const [isOpen, setIsOpen] = useState(false);
- 
-    const togglePopup = () => {
-      setIsOpen(!isOpen);
-    }
+    
     return (
         <div>
             <div className="editprofileheader">
@@ -53,20 +86,19 @@ function Editprofile () {
                     </div>
                 </form>
                 <div>
-                    <input
-                        className="exercise"
-                        type="button"
-                        value="Exercise"
-                        onClick={togglePopup}
-                    />
-                    {isOpen && <Popup
-                        content={<>
-                            <b>Design your Popup</b>
-                            <p>Lorem ipsum dolor sit amet</p>
-                            <button>Test button</button>
-                    </>}
-                    handleClose={togglePopup}
-                    />}
+                        <div>
+                            <button data-modal-target="#modal">Open Modal</button>
+                                <div className="modal" id="modal">
+                                    <div className="modal_header">
+                                        <div className="title">Example Modal</div>
+                                        <button data-close-button classname="close_button">&times;</button>
+                                    </div>
+                                    <div className="modal_body">
+                                    Lorem ipsum dolor sit amet consectetur adi
+                                    </div>
+                                </div>  
+                        </div>
+                        <div id="overlay"></div>
                 </div>
             </div>
         </div>

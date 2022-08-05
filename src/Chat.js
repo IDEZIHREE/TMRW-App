@@ -2,8 +2,7 @@ import React from "react";
 import "./Chat.css";
 import { Avatar } from '@mui/material';
 import { Link } from "react-router-dom";
-import Header from './Header';
-import Footer from './Footer';
+
 
 function Chat({ name, message, profilePic, timestamp }) {
     return ( 

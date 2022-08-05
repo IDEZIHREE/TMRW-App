@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import { Avatar } from "@mui/material";
 import "./ChatScreen.css";
-import Header from './Header';
 import "./Footer.css";
+import { Link } from "react-router-dom";
+//ICONS
 import NightlightRoundedIcon from '@mui/icons-material/NightlightRounded';
 import { IconButton } from "@mui/material";
 import PersonIcon from '@mui/icons-material/Person';
 import QuestionAnswerRoundedIcon from '@mui/icons-material/QuestionAnswerRounded';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import { Link } from "react-router-dom";
+
 
 function ChatScreen () {
     const [input, setInput] = useState("");
@@ -37,7 +37,7 @@ function ChatScreen () {
 
     return (
         <div className="chatScreen">
-            <img className="message_image" src="https://www.biography.com/.image/t_share/MTc5OTk2ODUyMTMxNzM0ODcy/gettyimages-1229892983-square.jpg" />
+            <img className="message_image" src="https://www.biography.com/.image/t_share/MTc5OTk2ODUyMTMxNzM0ODcy/gettyimages-1229892983-square.jpg" alt="message-pic" />
             <p className="chatScreen_timestamp">
             YOU MATCHED WITH ELON ON 7/29
             </p>

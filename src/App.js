@@ -18,8 +18,8 @@ function App() {
         <Route path="chat" element={<Chat />} />
         <Route path="chat/:person" element={<ChatScreenFunction />} />
         <Route path="profile" element={<ProfilePage />} />
-        <Route path="settings" element={<SettingsPage />} />
-        <Route path="profile/:editprofile" element={<EditProfilePage />} />
+        <Route path="profile/settings" element={<SettingsPage />} />
+        <Route path="profile/editprofile" element={<EditProfilePage />} />
       </Routes>
     </div>
   );
