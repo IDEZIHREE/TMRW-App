@@ -1,63 +1,78 @@
-*, *::after, *::before {
-    box-sizing: border-box;
-  }
-  
-  .modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: 200ms ease-in-out;
-    border: 1px solid black;
-    border-radius: 10px;
-    z-index: 10;
-    background-color: white;
-    width: 500px;
-    max-width: 80%;
-  }
-  
-  .modal.active {
-    transform: translate(-50%, -50%) scale(1);
-  }
-  .modal_header {
-    padding: 10px 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid black;
-  }
-  
-  .modal_header .title {
-    font-size: 1.25rem;
-    font-weight: bold;
-  }
-  
-  .modal_header .close_button {
-    cursor: pointer;
-    border: none;
-    outline: none;
-    background: none;
-    font-size: 1.25rem;
-    font-weight: bold;
-  }
-  
-  .modal_body {
-    padding: 10px 15px;
-  }
-  
-  #overlay{
-    position: fixed;
-    opacity: 0;
-    transition: 200ms ease-in-out;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, .5);
-    pointer-events: none;
-  }
-  
-  #overlay.active {
-    opacity: 1;
-    pointer-events: all;
-  }
+.open-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  cursor: pointer;
+  background-color: #121212;
+  color: white;
+  border: none;
+  width: 100%;
+  max-width: 100%;
+  border-bottom: 1px solid rgb(56, 56, 56);
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1px solid black;
+  border-radius: 10px;
+  background-color: #121212;
+  width: 500px;
+  max-width: 80%;
+  z-index: 10;
+  transition: 200ms ease-in-out;
+}
+
+.modal1 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1px solid black;
+  border-radius: 10px;
+  background-color: #121212;
+  width: 500px;
+  max-width: 80%;
+  z-index: 10;
+  transition: 200ms ease-in-out;
+}
+
+.modal-header {
+  padding:  10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid white;
+}
+
+.modal-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: white;
+}
+
+.body {
+  min-height: 100vh;
+}
+
+.close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: #121212;
+  color: #FF5349;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-body {
+  padding: 10px 15px;
+}
+
+.modal::backdrop {
+  background: linear-gradient(45deg, red, blue);
+  opacity: .2;
+}

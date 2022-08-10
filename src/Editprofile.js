@@ -2,47 +2,17 @@ import React from "react";
 import "./Editprofile.css"
 import "./Popup";
 import "./Popup.css";
+import { Link } from "react-router-dom";
+//Header Icon
+import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
+import { IconButton } from "@mui/material";
 //Icons
 import SchoolIcon from '@mui/icons-material/School';
 import HouseIcon from '@mui/icons-material/House';
 import WorkIcon from '@mui/icons-material/Work';
+//Buttons
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
-const openModalButtons = document.querySelectorAll("[data-modal-target]")
-const closeModalButtons = document.querySelectorAll("[data-close-button]")
-const overlay = document.getElementById("overlay")
-
-openModalButtons.forEach(button => {
-  button.addEventListener("click:", () => {
-    const modal = document.querySelector(button.dataset.modalTarget)
-    openModal(modal)
-  })
-})
-
-overlay.addEventListener("click", () => {
-  const modal = document.querySelectorAll(".modal.active")
-  modal.forEach(modal => {
-    closeModal(modal)
-  })
-})
-
-closeModalButtons.forEach(button => {
-  button.addEventListener("click:", () => {
-    const modal = button.closest(".modal")
-    closeModal(modal)
-  })
-})
-
-function openModal(modal) {
-  if (modal == null) return
-  modal.classList.add("active")
-  overlay.classList.add ("active")
-}
-
-function closeModal(modal) {
-  if (modal == null) return
-  modal.classList.remove("active")
-  overlay.classList.remove("active")
-}
 
 
 function Editprofile () {
@@ -50,6 +20,11 @@ function Editprofile () {
     return (
         <div>
             <div className="editprofileheader">
+              <IconButton>
+              <Link to="/profile" >
+                <NavigateBeforeIcon className="navigate-back" fontSize="large"/>
+              </Link>
+              </IconButton>
                 <h1>EditProfile</h1>
             </div>
             <div>
@@ -82,24 +57,164 @@ function Editprofile () {
                         </div>  
                         
                         <h1>Extra About Me</h1>
-                        <p>Give us the deets...... gender, sexual orientation, height, exercise, smoking drinking zodiac, religion, pets, kids, looking for?, politics</p>
                     </div>
                 </form>
-                <div>
-                        <div>
-                            <button data-modal-target="#modal">Open Modal</button>
-                                <div className="modal" id="modal">
-                                    <div className="modal_header">
-                                        <div className="title">Example Modal</div>
-                                        <button data-close-button classname="close_button">&times;</button>
-                                    </div>
-                                    <div className="modal_body">
-                                    Lorem ipsum dolor sit amet consectetur adi
-                                    </div>
-                                </div>  
+                  <div>
+                      <button className="button open-button">Exercise <NavigateNextIcon /></button>
+                      <dialog className="modal" id="modal">
+                        <div className="modal-header">
+                          <div className="title">Exercise</div>
+                            <button className="button close-button">&times;</button>
+                        </div>   
+                        <div className="modal-body">        
+                            <h2>How often do you exercise?</h2>
                         </div>
-                        <div id="overlay"></div>
-                </div>
+                      </dialog>
+                  </div>
+                  <div>
+                      <button className="button open-button">Gender <NavigateNextIcon /></button>
+                      <dialog className="modal" id="modal">
+                        <div className="modal-header">
+                          <div className="title">Gender</div>
+                            <button className="button close-button">&times;</button>
+                        </div>   
+                        <div className="modal-body">        
+                            <h2>what is your gender?</h2>
+                        </div>
+                      </dialog>
+                  </div>
+                  <div>
+                      <button className="button open-button">Sexual Orientation <NavigateNextIcon /></button>
+                      <dialog className="modal" id="modal">
+                        <div className="modal-header">
+                          <div className="title">Sexual Orientation</div>
+                            <button className="button close-button">&times;</button>
+                        </div>   
+                        <div className="modal-body">        
+                            <h2>What is your sexual orientation?</h2>
+                        </div>
+                      </dialog>
+                  </div>
+                  <div>
+                      <button className="button open-button">Height <NavigateNextIcon /></button>
+                      <dialog className="modal" id="modal">
+                        <div className="modal-header">
+                          <div className="title">Height</div>
+                            <button className="button close-button">&times;</button>
+                        </div>   
+                        <div className="modal-body">        
+                            <h2>How tall are you?</h2>
+                        </div>
+                      </dialog>
+                  </div>
+                  <div>
+                      <button className="button open-button">Smoking <NavigateNextIcon /></button>
+                      <dialog className="modal" id="modal">
+                        <div className="modal-header">
+                          <div className="title">Smoking</div>
+                            <button className="button close-button">&times;</button>
+                        </div>   
+                        <div className="modal-body">        
+                            <h2>How often do you smoke?</h2>
+                        </div>
+                      </dialog>
+                  </div>
+                  <div>
+                      <button className="button open-button">Drinking <NavigateNextIcon /></button>
+                      <dialog className="modal" id="modal">
+                        <div className="modal-header">
+                          <div className="title">Drinking</div>
+                            <button className="button close-button">&times;</button>
+                        </div>   
+                        <div className="modal-body">        
+                            <h2>How often do you drink?</h2>
+                        </div>
+                      </dialog>
+                  </div>
+                  <div>
+                      <button className="button open-button">Zodiac Sign <NavigateNextIcon /></button>
+                      <dialog className="modal" id="modal">
+                        <div className="modal-header">
+                          <div className="title">Zodiac Sign</div>
+                            <button className="button close-button">&times;</button>
+                        </div>   
+                        <div className="modal-body">        
+                            <h2>What is your zodiac sign?</h2>
+                        </div>
+                      </dialog>
+                  </div>
+                  <div>
+                      <button className="button open-button">Religion <NavigateNextIcon /></button>
+                      <dialog className="modal" id="modal">
+                        <div className="modal-header">
+                          <div className="title">Religion</div>
+                            <button className="button close-button">&times;</button>
+                        </div>   
+                        <div className="modal-body">        
+                            <h2>What is your religion?</h2>
+                        </div>
+                      </dialog>
+                  </div>
+                  <div>
+                      <button className="button open-button">Pets<NavigateNextIcon /></button>
+                      <dialog className="modal" id="modal">
+                        <div className="modal-header">
+                          <div className="title">Pets</div>
+                            <button className="button close-button">&times;</button>
+                        </div>   
+                        <div className="modal-body">        
+                            <h2>Do you have any pets?</h2>
+                        </div>
+                      </dialog>
+                  </div>
+                  <div>
+                      <button className="button open-button">Kids <NavigateNextIcon /></button>
+                      <dialog className="modal" id="modal">
+                        <div className="modal-header">
+                          <div className="title">Kids</div>
+                            <button className="button close-button">&times;</button>
+                        </div>   
+                        <div className="modal-body">        
+                            <h2>Do you have any kids?</h2>
+                        </div>
+                      </dialog>
+                  </div>
+                  <div>
+                      <button className="button open-button">Political Views <NavigateNextIcon /></button>
+                      <dialog className="modal" id="modal">
+                        <div className="modal-header">
+                          <div className="title">Political Views</div>
+                            <button className="button close-button">&times;</button>
+                        </div>   
+                        <div className="modal-body">        
+                            <h2>What are your political views</h2>
+                        </div>
+                      </dialog>
+                  </div>
+                  <div>
+                      <button className="button open-button">Loooking for <NavigateNextIcon /></button>
+                      <dialog className="modal" id="modal">
+                        <div className="modal-header">
+                          <div className="title">Looking for</div>
+                            <button className="button close-button">&times;</button>
+                        </div>   
+                        <div className="modal-body">        
+                            <h2>Looking for male/female?</h2>
+                        </div>
+                      </dialog>
+                  </div>
+                  <div>
+                      <button className="button open-button">Travel <NavigateNextIcon /></button>
+                      <dialog className="modal" id="modal">
+                        <div className="modal-header">
+                          <div className="title">Travel</div>
+                            <button className="button close-button">&times;</button>
+                        </div>   
+                        <div className="modal-body">        
+                            <h2>How often do you travel? (rarely, asmuch as possible, homebody)</h2>
+                        </div>
+                      </dialog>
+                  </div>
             </div>
         </div>
     )

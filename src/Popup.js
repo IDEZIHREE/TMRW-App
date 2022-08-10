@@ -1,50 +1,13 @@
-import React from "react";
-import "./Popup.css";
+const openModal = document.querySelector ('.open-button')
+const closeModal = document.querySelector ('.close-button')
+const modal = document.querySelector ('.modal')
 
-function Popup () {
 
-
-const openModalButtons = document.querySelectorAll("[data-modal-target]")
-const closeModalButtons = document.querySelectorAll("[data-close-button]")
-const overlay = document.getElementById("overlay")
-
-openModalButtons.forEach(button => {
-  button.addEventListener("click:", () => {
-    const modal = document.querySelector(button.dataset.modalTarget)
-    openModal(modal)
-  })
+openModal.addEventListener ('click', () => {
+  modal.showModal();
 })
 
-overlay.addEventListener("click", () => {
-  const modal = document.querySelectorAll(".modal.active")
-  modal.forEach(modal => {
-    closeModal(modal)
-  })
+closeModal.addEventListener ('click', () => {
+  modal.close();
 })
 
-closeModalButtons.forEach(button => {
-  button.addEventListener("click:", () => {
-    const modal = button.closest(".modal")
-    closeModal(modal)
-  })
-})
-
-function openModal(modal) {
-  if (modal == null) return
-  modal.classList.add("active")
-  overlay.classList.add ("active")
-}
-
-function closeModal(modal) {
-  if (modal == null) return
-  modal.classList.remove("active")
-  overlay.classList.remove("active")
-}
-
-return (
-  <div></div>
-)
-};
-
-
-export default Popup;
