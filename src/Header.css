@@ -21,3 +21,8 @@
     text-align: center;
     margin: auto;
 }
+
+.FakeHeaderIcon {
+    padding: 10px;
+    color: transparent;
+}

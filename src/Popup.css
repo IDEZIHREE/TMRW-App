@@ -12,21 +12,11 @@
   border-bottom: 1px solid rgb(56, 56, 56);
 }
 
-.modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 1px solid black;
-  border-radius: 10px;
-  background-color: #121212;
-  width: 500px;
-  max-width: 80%;
-  z-index: 10;
-  transition: 200ms ease-in-out;
+.open-button:hover {
+  background-color: rgb(34, 34, 34);
 }
 
-.modal1 {
+.modal {
   position: fixed;
   top: 50%;
   left: 50%;

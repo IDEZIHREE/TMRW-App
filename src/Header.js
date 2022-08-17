@@ -6,12 +6,17 @@ import FilterListRoundedIcon from '@mui/icons-material/FilterListRounded';
 function Header() {
 
     return (
-        <div className="header">
-            <h1 className="Title">tmrw</h1>
-            <IconButton>
-                <FilterListRoundedIcon className="HeaderIcon" fontSize="large" />
-            </IconButton>
-        </div>
+       <div>
+            <div className="header">
+            <div>
+                <FilterListRoundedIcon className="FakeHeaderIcon" fontSize="large" />
+            </div>
+                <h1 className="Title">tmrw</h1>
+                <IconButton>
+                    <FilterListRoundedIcon className="HeaderIcon" fontSize="large" />
+                </IconButton>
+            </div>
+        </div> 
     )
 }
 

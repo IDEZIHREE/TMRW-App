@@ -19,43 +19,49 @@ function Editprofile () {
     
     return (
         <div>
-            <div className="editprofileheader">
-              <IconButton>
-              <Link to="/profile" >
-                <NavigateBeforeIcon className="navigate-back" fontSize="large"/>
-              </Link>
-              </IconButton>
-                <h1>EditProfile</h1>
+            <div className="header_style">
+              <div className="header_img">
+                <IconButton>
+                  <Link to="/profile" >
+                    <NavigateBeforeIcon className="navigate-back" fontSize="large"/>
+                  </Link>
+                </IconButton>
+              </div>
+              <span className="header_span">
+                EditProfile
+              </span>
+              <div>
+                <NavigateBeforeIcon className="fake-back" fontSize="large"/>
+              </div>
             </div>
             <div>
                 <form action="/action_page.php">
                     <div class="container">
                         <div className="personal_details">
-                        <label for="About Me"><b>My bio</b></label>
+                          <label for="About Me"><b>My bio</b></label>
                         </div>
                         <div className="about_me_bio">
-                        <input className="about_me_input" type="text" placeholder="Write a fun introduction about yourself" name="about" id="about me" required>
-                        </input>
+                          <input className="about_me_input" type="text" placeholder="Write a fun introduction about yourself" name="about" id="about me" required>
+                          </input>
                         </div>
                         <div className="personal_details">
-                        <label for="Personal Details"><b>Personal Details</b></label>
+                          <label for="Personal Details"><b>Personal Details</b></label>
                         </div>
                         <div className="about_me_q">
-                        <label for="Hometown"><HouseIcon /></label>
-                        <input type="text" placeholder="Enter Hometown" name="pDetail" id="Hometown" required>
-                        </input> 
+                          <label for="Hometown"><HouseIcon /></label>
+                            <input type="text" placeholder="Enter Hometown" name="pDetail" id="Hometown" required>
+                            </input> 
                         </div>
                         <div className="about_me_q">
-                        <label for="work"><WorkIcon /></label>
-                        <input type="text" placeholder="Where do you work" name="pDetail" id="work" required>
-                        </input>   
+                          <label for="work"><WorkIcon /></label>
+                            <input type="text" placeholder="Where do you work" name="pDetail" id="work" required>
+                            </input>   
                         </div>
                         <div className="about_me_q">
-                        <label for="education"><SchoolIcon /></label>
-                        <input type="text" placeholder="where do you go to school?" name="pDetail" id="education" required>
-                        </input>   
+                          <label for="education"><SchoolIcon /></label>
+                            <input type="text" placeholder="where do you go to school?" name="pDetail" id="education" required>
+                            </input>   
                         </div>  
-                        
                         <h1>Extra About Me</h1>
                     </div>
                 </form>
@@ -63,25 +69,27 @@ function Editprofile () {
                       <button className="button open-button">Exercise <NavigateNextIcon /></button>
                       <dialog className="modal" id="modal">
                         <div className="modal-header">
-                          <div className="title">Exercise</div>
+                          <div className="title">How often do you exercise?</div>
                             <button className="button close-button">&times;</button>
                         </div>   
-                        <div className="modal-body">        
-                            <h2>How often do you exercise?</h2>
+                        <div className="modal-body"> 
+                              <button> Everyday </button>
+                              <button> a few times a week</button>
+                              <button> Never</button>   
                         </div>
                       </dialog>
                   </div>
                   <div>
-                      <button className="button open-button">Gender <NavigateNextIcon /></button>
-                      <dialog className="modal" id="modal">
-                        <div className="modal-header">
-                          <div className="title">Gender</div>
-                            <button className="button close-button">&times;</button>
-                        </div>   
-                        <div className="modal-body">        
-                            <h2>what is your gender?</h2>
-                        </div>
-                      </dialog>
+                    <select className="gender-option">
+                      <option
+                          style={{
+                              display:'none'
+                            }}
+                          >Gender <NavigateNextIcon />
+                      </option>
+                      <option className="gender-dropdown">Male</option>
+                      <option className="gender-dropdown">Female</option>
+                    </select>
                   </div>
                   <div>
                       <button className="button open-button">Sexual Orientation <NavigateNextIcon /></button>
@@ -200,6 +208,30 @@ function Editprofile () {
                         </div>   
                         <div className="modal-body">        
                             <h2>Looking for male/female?</h2>
+                        </div>
+                      </dialog>
+                  </div>
+                  <div>
+                      <button className="button open-button">Travel <NavigateNextIcon /></button>
+                      <dialog className="modal" id="modal">
+                        <div className="modal-header">
+                          <div className="title">Travel</div>
+                            <button className="button close-button">&times;</button>
+                        </div>   
+                        <div className="modal-body">        
+                            <h2>How often do you travel? (rarely, asmuch as possible, homebody)</h2>
+                        </div>
+                      </dialog>
+                  </div>
+                  <div>
+                      <button className="button open-button">Travel <NavigateNextIcon /></button>
+                      <dialog className="modal" id="modal">
+                        <div className="modal-header">
+                          <div className="title">Travel</div>
+                            <button className="button close-button">&times;</button>
+                        </div>   
+                        <div className="modal-body">        
+                            <h2>How often do you travel? (rarely, asmuch as possible, homebody)</h2>
                         </div>
                       </dialog>
                   </div>
