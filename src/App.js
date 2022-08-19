@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link} from "react-router-dom";
 import './App.css';
 import Chats from "./Chats";
 import ChatScreen from "./ChatScreen";
@@ -58,6 +58,7 @@ function ProfilePage () {
     </main>
   );
 }
+///Settings Pages
 
 function SettingsPage () {
   return (
@@ -66,6 +67,8 @@ function SettingsPage () {
     </main>
   );
 }
+
+
 
 function EditProfilePage () {
   return (

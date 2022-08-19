@@ -79,29 +79,60 @@ function Editprofile () {
                         </div>
                       </dialog>
                   </div>
-                  <div>
-                    <select className="gender-option">
-                      <option
-                          style={{
-                              display:'none'
-                            }}
-                          >Gender <NavigateNextIcon />
-                      </option>
-                      <option className="gender-dropdown">Male</option>
-                      <option className="gender-dropdown">Female</option>
-                    </select>
+                  <div className="gender-dropdown">
+                    <details className="custom-select">
+                      <summary className="radios">
+                        <input type="radio" name="item" id="default" title="Gender" checked />
+                        <input type="radio" name="item" id="item1" title="Straight" />
+                        <input type="radio" name="item" id="item2" title="Gay" />
+                        <input type="radio" name="item" id="item3" title="Pansexual" />
+                        <input type="radio" name="item" id="item4" title="Item 4" />
+                        <input type="radio" name="item" id="item5" title="Item 5" />
+                      </summary>
+                      <ul className="list">
+                        <li>
+                          <label for="item1">
+                            Male
+                            <span></span>
+                          </label>
+                        </li>
+                        <li>
+                          <label for="item2">Female</label>
+                        </li>
+                      </ul>
+                    </details>
                   </div>
-                  <div>
-                      <button className="button open-button">Sexual Orientation <NavigateNextIcon /></button>
-                      <dialog className="modal" id="modal">
-                        <div className="modal-header">
-                          <div className="title">Sexual Orientation</div>
-                            <button className="button close-button">&times;</button>
-                        </div>   
-                        <div className="modal-body">        
-                            <h2>What is your sexual orientation?</h2>
-                        </div>
-                      </dialog>
+                  <div className="sexual-orientation-dropdown">
+                    <details className="custom-select">
+                      <summary className="radios">
+                        <input type="radio" name="item" id="default" title="Sexual Orientation" checked />
+                        <input type="radio" name="item" id="item1" title="Straight" />
+                        <input type="radio" name="item" id="item2" title="Gay" />
+                        <input type="radio" name="item" id="item3" title="Pansexual" />
+                        <input type="radio" name="item" id="item4" title="Item 4" />
+                        <input type="radio" name="item" id="item5" title="Item 5" />
+                      </summary>
+                      <ul className="list">
+                        <li>
+                          <label for="item1">
+                            Straight
+                            <span></span>
+                          </label>
+                        </li>
+                        <li>
+                          <label for="item2">Gay</label>
+                        </li>
+                        <li>
+                          <label for="item3">Pansexual</label>
+                        </li>
+                        <li>
+                          <label for="item4">Item 4</label>
+                        </li>
+                        <li>
+                          <label for="item5">Item 5</label>
+                        </li>
+                      </ul>
+                    </details>
                   </div>
                   <div>
                       <button className="button open-button">Height <NavigateNextIcon /></button>

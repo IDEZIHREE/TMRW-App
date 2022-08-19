@@ -36,7 +36,19 @@
   }
 
   /* Body */
-.gender-option {
-  display: none;
-}
   
+/* Account Settings */
+
+.account-settings-info {
+  font-size: 80%;
+  color: grey;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 6px 0px;
+}
+
+.preferences-info {
+  font-size: 80%;
+  color: grey;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 6px 0px;
+}
