@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, Link} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import './App.css';
 import Chats from "./Chats";
 import ChatScreen from "./ChatScreen";
@@ -8,7 +8,7 @@ import SwipeButtons from './SwipeButtons';
 import Profile from "./Profile";
 import Settings from "./Settings";
 import Editprofile from './Editprofile';
-
+import Email from "./Email";
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
         <Route path="profile" element={<ProfilePage />} />
         <Route path="profile/settings" element={<SettingsPage />} />
         <Route path="profile/editprofile" element={<EditProfilePage />} />
+        <Route path="profile/settings/email" element={<EmailPage />} />
       </Routes>
     </div>
   );
@@ -64,6 +65,14 @@ function SettingsPage () {
   return (
     <main>
       <Settings />
+    </main>
+  );
+}
+
+function EmailPage () {
+  return (
+    <main>
+      <Email />
     </main>
   );
 }

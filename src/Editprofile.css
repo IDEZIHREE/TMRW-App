@@ -15,10 +15,8 @@
 
 .header_span {
   margin-right: auto;
-  background-image: linear-gradient(45deg, red, blue);
-  background-clip: text;
-  color: transparent;
-  font-size: 1.5rem;
+  color: #FF5349;
+  font-size: 150%;
 }
 
 .navigate-back {
@@ -90,6 +88,23 @@ input[name = "pDetail"]:focus {
 
 .personal_details {
   padding-bottom: 10px;
+  font-family: sans-serif;
+}
+
+.container_titles {
+  color: #FF5349;
+  font-weight: normal;
+}
+
+
+
+.extra-about-me {
+  padding: 8px;
+  background-color: #121212;
+  color: #FF5349;
+  overflow: hidden;
+  font-family:sans-serif;
+  font-weight: normal;
 }
 
 /* Buttons */
@@ -133,7 +148,10 @@ input[name = "pDetail"]:focus {
 }
 
 
+
 /* DropDown */
+
+
 .radios {
   display: flex;
   align-items: center;
@@ -148,7 +166,59 @@ input[name = "pDetail"]:focus {
   border-bottom: 1px solid rgb(56, 56, 56);
 }
 
+.options {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  cursor: pointer;
+  background-color: #121212;
+  color: white;
+  justify-content: space-between;
+  border: none;
+  max-width: 100%;
+  max-width: 100%;
+  border-bottom: 1px solid rgb(56, 56, 56);
+}
 
+/*  Gender Dropdown  */
+[title='Gender'] { 
+color:  white; 
+margin-right: 25%;
+}
+
+[title='Male'] { 
+color:  grey; 
+margin-left: 30%;
+}
+  
+[title='Female'] { 
+color:  grey;
+margin-left: 40%;
+margin-right: 10%;
+}
+    
+/* Sexual Orientation Dropdown */
+
+[title='Sexual Orientation'] {
+color:  white;
+margin-right: 5%;
+}
+
+[title='Straight'] {
+  color:  grey; 
+  margin-left: 35%;
+}
+
+[title='Gay'] {
+  color:  grey; 
+  margin-left: 35%;
+}
+
+[title='Pansexual'] {
+  color:  grey; 
+  margin-left: 35%;
+}
+            
 .details {
 	position: relative;
 	width: 300px;
@@ -183,6 +253,7 @@ input[name = "pDetail"]:focus {
 	left: 0;
   max-width: 100%;
 }
+
 summary:hover{
   background-color: rgb(34, 34, 34);
 }
@@ -201,12 +272,9 @@ summary:after {
 	transition: ease-in-out 100ms;
 }
 
-
-
 details[open] summary:after {
 	transform: rotate(-45deg) translate(0%, 0%);
 }
-
 
 ul {
 	width: 90%;
@@ -221,7 +289,7 @@ ul {
 	border-radius: 5px;
 	max-height: 300px;
 	overflow-y: auto;
-  border: solid white;
+
   border-width: 1px;
   list-style-type: none;
 }
@@ -247,7 +315,9 @@ li:last-child {
 summary.radios:before {
 	content: var(--selection);
 }
-
+summary.options:before {
+	content: var(--selection);
+}
 input[type=radio] {
 	appearance: none;
 	display: none;

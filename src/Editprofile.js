@@ -28,7 +28,7 @@ function Editprofile () {
                 </IconButton>
               </div>
               <span className="header_span">
-                EditProfile
+                Edit Profile
               </span>
               <div>
                 <NavigateBeforeIcon className="fake-back" fontSize="large"/>
@@ -38,14 +38,14 @@ function Editprofile () {
                 <form action="/action_page.php">
                     <div class="container">
                         <div className="personal_details">
-                          <label for="About Me"><b>My bio</b></label>
+                          <label for="About Me"><h4 className="container_titles">My bio</h4></label>
                         </div>
                         <div className="about_me_bio">
                           <input className="about_me_input" type="text" placeholder="Write a fun introduction about yourself" name="about" id="about me" required>
                           </input>
                         </div>
                         <div className="personal_details">
-                          <label for="Personal Details"><b>Personal Details</b></label>
+                          <label for="Personal Details"><h4 className="container_titles">Personal Details</h4></label>
                         </div>
                         <div className="about_me_q">
                           <label for="Hometown"><HouseIcon /></label>
@@ -61,11 +61,11 @@ function Editprofile () {
                           <label for="education"><SchoolIcon /></label>
                             <input type="text" placeholder="where do you go to school?" name="pDetail" id="education" required>
                             </input>   
-                        </div>  
-                        <h1>Extra About Me</h1>
+                        </div>
                     </div>
                 </form>
-                  <div>
+                <h1 className="extra-about-me">Extra About Me</h1>
+                <div>
                       <button className="button open-button">Exercise <NavigateNextIcon /></button>
                       <dialog className="modal" id="modal">
                         <div className="modal-header">
@@ -81,23 +81,20 @@ function Editprofile () {
                   </div>
                   <div className="gender-dropdown">
                     <details className="custom-select">
-                      <summary className="radios">
-                        <input type="radio" name="item" id="default" title="Gender" checked />
-                        <input type="radio" name="item" id="item1" title="Straight" />
-                        <input type="radio" name="item" id="item2" title="Gay" />
-                        <input type="radio" name="item" id="item3" title="Pansexual" />
-                        <input type="radio" name="item" id="item4" title="Item 4" />
-                        <input type="radio" name="item" id="item5" title="Item 5" />
+                      <summary className="options">
+                        <input type="radio" name="Gender" id="Gender" title="Gender" checked />
+                        <input type="radio" name="gen" id="Male" title="Male" />
+                        <input type="radio" name="gen" id="Female" title="Female" />
                       </summary>
                       <ul className="list">
                         <li>
-                          <label for="item1">
+                          <label for="Male">
                             Male
                             <span></span>
                           </label>
                         </li>
                         <li>
-                          <label for="item2">Female</label>
+                          <label for="Female">Female</label>
                         </li>
                       </ul>
                     </details>
@@ -105,31 +102,23 @@ function Editprofile () {
                   <div className="sexual-orientation-dropdown">
                     <details className="custom-select">
                       <summary className="radios">
-                        <input type="radio" name="item" id="default" title="Sexual Orientation" checked />
-                        <input type="radio" name="item" id="item1" title="Straight" />
-                        <input type="radio" name="item" id="item2" title="Gay" />
-                        <input type="radio" name="item" id="item3" title="Pansexual" />
-                        <input type="radio" name="item" id="item4" title="Item 4" />
-                        <input type="radio" name="item" id="item5" title="Item 5" />
+                        <input type="radio" name="Sexual Orientation" id="Sexual Orientation" title="Sexual Orientation" checked />
+                        <input type="radio" name="sexualO" id="Straight" title="Straight" />
+                        <input type="radio" name="sexualO" id="Gay" title="Gay" />
+                        <input type="radio" name="sexualO" id="Pansexual" title="Pansexual" />
                       </summary>
                       <ul className="list">
                         <li>
-                          <label for="item1">
+                          <label for="Straight">
                             Straight
                             <span></span>
                           </label>
                         </li>
                         <li>
-                          <label for="item2">Gay</label>
+                          <label for="Gay">Gay</label>
                         </li>
                         <li>
-                          <label for="item3">Pansexual</label>
-                        </li>
-                        <li>
-                          <label for="item4">Item 4</label>
-                        </li>
-                        <li>
-                          <label for="item5">Item 5</label>
+                          <label for="Pansexual">Pansexual</label>
                         </li>
                       </ul>
                     </details>

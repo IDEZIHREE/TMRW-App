@@ -32,7 +32,7 @@ function Settings () {
                       <div className="account-settings">
                         <label for="Account Settigs"><b>Account Information</b></label>
                       </div>
-                      <Link to="EmailPage">
+                      <Link to="email">
                         <button className="button open-button">Email <NavigateNextIcon /></button>
                       </Link>
                       <Link to="PhoneNumberPage">
