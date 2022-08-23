@@ -3,6 +3,8 @@ import "./Profile.css";
 import { Link } from "react-router-dom";
 import Header from './Header';
 import "./Footer.css";
+import "./Popup";
+import "./Popup.css";
 //Icons
 import NightlightRoundedIcon from '@mui/icons-material/NightlightRounded';
 import { IconButton } from "@mui/material";
@@ -32,7 +34,17 @@ function Profile ({ profilePic, name, age }) {
                 <button>Log out</button>
             </div>
             <div className="delete">
-                <button>Delete my accout</button>
+                <button className="button open-button">Delete my account</button>
+                <dialog className="modal" id="modal">
+                <div className="modal-header">
+                    <div className="title">Are you sure you want to delete your account?</div>
+                    <button className="button close-button">&times;</button>
+                </div>   
+                <div className="modal-body"> 
+                    <p>You will have to sign in within 30 days to keep your account or it will be lost</p>
+                    <button className="button end-account"> Yes delete my account </button>
+                </div>
+                </dialog>
             </div>
         <Footer />
         </div>

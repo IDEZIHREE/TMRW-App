@@ -96,8 +96,6 @@ input[name = "pDetail"]:focus {
   font-weight: normal;
 }
 
-
-
 .extra-about-me {
   padding: 8px;
   background-color: #121212;
@@ -193,8 +191,8 @@ margin-left: 30%;
   
 [title='Female'] { 
 color:  grey;
-margin-left: 40%;
-margin-right: 10%;
+margin-left: 35%;
+margin-right: 5%;
 }
     
 /* Sexual Orientation Dropdown */
@@ -214,11 +212,92 @@ margin-right: 5%;
   margin-left: 35%;
 }
 
-[title='Pansexual'] {
+[title='LGBTQA+'] {
   color:  grey; 
   margin-left: 35%;
 }
-            
+/* Smoking Dropdown*/
+[title='Gender'] { 
+  color:  white; 
+  margin-right: 25%;
+  }
+  
+  [title='Male'] { 
+  color:  grey; 
+  margin-left: 30%;
+  }
+    
+  [title='Female'] { 
+  color:  grey;
+  margin-left: 35%;
+  margin-right: 5%;
+  }
+      
+  /* Sexual Orientation Dropdown */
+  
+[title='Smoking'] {
+  color:  white;
+  margin-right: 5%;
+}
+
+[title='Everyday'] {
+  color:  grey; 
+  margin-left: 35%;
+}
+
+[title='A couple Times a Week'] {
+  color:  grey; 
+  margin-left: 35%;
+}
+
+[title='Occasionally'] {
+  color:  grey; 
+  margin-left: 35%;
+}
+
+
+[title='Socially'] {
+  color:  grey; 
+  margin-left: 35%;
+}
+
+[title='Never'] {
+  color:  grey; 
+  margin-left: 35%;
+}
+
+/* Drinking */
+[title='Drinking'] {
+  color:  white;
+  margin-right: 5%;
+}
+
+[title='Daily'] {
+  color:  grey; 
+  margin-left: 35%;
+}
+
+[title='Few'] {
+  color:  grey; 
+  margin-left: 35%;
+}
+
+[title='Mostly Weekends'] {
+  color:  grey; 
+  margin-left: 35%;
+}
+
+[title='Social Drinker'] {
+  color:  grey; 
+  margin-left: 35%;
+}
+
+[title='Never'] {
+  color:  grey; 
+  margin-left: 35%;
+}
+
+/* Dropdown List */
 .details {
 	position: relative;
 	width: 300px;

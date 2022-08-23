@@ -35,6 +35,9 @@
   /* Body */
   
 /* Account Settings */
+.account-settings {
+  font-family: sans-serif;
+}
 
 .account-settings-info {
   font-size: 80%;
@@ -43,9 +46,42 @@
   padding: 6px 0px;
 }
 
+/* Location Settings */
+.Location {
+  font-family: sans-serif;
+}
+
+
+/* Preferences Settings */
+.Preferences {
+  font-family: sans-serif;
+  font-weight: normal;
+}
 .preferences-info {
   font-size: 80%;
   color: grey;
   font-family: 'Courier New', Courier, monospace;
   padding: 6px 0px;
 }
+
+[title='Looking For'] { 
+  color:  white; 
+  margin-right: 25%;
+  }
+
+/* Extra Settings */
+.Extra-settings {
+  font-family: sans-serif;
+}
+
+/* Legal Settings */
+.Legal {
+  font-family: sans-serif;
+}
+
+
+/* Contact Us Settings */
+.Contact{
+  font-family: sans-serif;
+}
+

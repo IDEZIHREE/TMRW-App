@@ -1,16 +1,15 @@
-.email_info{ 
+.phonenumber_info {
     display: flex;
     border-bottom: 1px solid grey;
     height: 7vh;
     font-size: 200%;
     padding-top: 5px;
+    size: large;
 }
-  
 
-.email_page {
+.phonenumber_page{
     padding: 16px;
     background-color: #121212;
     color: #FF5249;
     overflow: hidden;
-    text-align: center;
 }

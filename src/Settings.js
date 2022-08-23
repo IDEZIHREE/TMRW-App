@@ -30,12 +30,12 @@ function Settings () {
                 <form action="/action_page.php">
                     <div className="container">
                       <div className="account-settings">
-                        <label for="Account Settigs"><b>Account Information</b></label>
+                        <label for="Account Settigs"><h4 className="container_titles">Account Information</h4></label>
                       </div>
                       <Link to="email">
                         <button className="button open-button">Email <NavigateNextIcon /></button>
                       </Link>
-                      <Link to="PhoneNumberPage">
+                      <Link to="Phonenumber">
                         <button className="button open-button">Phone Number <NavigateNextIcon /></button>
                       </Link>
                       <div className="account-settings-info">
@@ -44,24 +44,43 @@ function Settings () {
                     <br></br>
                     <br></br>
                       <div className="Location">
-                        <label for="Location"><b>Location</b></label>
+                        <label for="Location"><h4 className="container_titles">Location</h4></label>
                       </div>
                         <button className="button open-button">Location <NavigateNextIcon /></button>
                         <button className="button open-button">Location Range <NavigateNextIcon /></button>
                     <br></br>
                     <br></br>
                       <div className="Preferences">
-                        <label for="Preferences"><b>Preferences</b></label>
+                        <label for="Preferences"><h4 className="container_titles">Preferences</h4></label>
                       </div>
-                        <button className="button open-button">Looking For <NavigateNextIcon /></button>
+                        <div className="lookingfor-dropdown">
+                          <details className="custom-select">
+                            <summary className="options">
+                              <input type="radio" name="Gender" id="Looking For" title="Looking For" checked />
+                              <input type="radio" name="gen" id="Male" title="Male" />
+                              <input type="radio" name="gen" id="Female" title="Female" />
+                            </summary>
+                            <ul className="list">
+                              <li>
+                                <label for="Male">
+                                  Male
+                                  <span></span>
+                                </label>
+                              </li>
+                              <li>
+                                <label for="Female">Female</label>
+                              </li>
+                            </ul>
+                          </details>
+                        </div>
                         <button className="button open-button">Age Range <NavigateNextIcon /></button>
                         <button className="button open-button">Languages <NavigateNextIcon /></button>
                       <div className="preferences-info">
                         <label for="Preferences Info"><b>Add you preferences to find people that fit your liking.</b></label>
                       </div>
                     <br></br> 
-                      <div className="Extra Settings">
-                        <label for="Extra Settings"><b>Extra Settings</b></label>
+                      <div className="Extra-settings">
+                        <label for="Extra Settings"><h4 className="container_titles">Extra Settings</h4></label>
                       </div>
                         <button className="button open-button">Read Receipts <NavigateNextIcon /></button> 
                         <button className="button open-button">Blocked Contacts <NavigateNextIcon /></button> 
@@ -69,7 +88,7 @@ function Settings () {
                         <button className="button open-button">Languages <NavigateNextIcon /></button> 
                     <br></br> 
                       <div className="Legal">
-                        <label for="Legal"><b>Legal</b></label>
+                        <label for="Legal"><h4 className="container_titles">Legal</h4></label>
                       </div>
                         <button className="button open-button">Terms of Service <NavigateNextIcon /></button> 
                         <button className="button open-button">License <NavigateNextIcon /></button> 
@@ -77,19 +96,19 @@ function Settings () {
                         <button className="button open-button">Cookies <NavigateNextIcon /></button> 
                     <br></br> 
                       <div className="Contact">
-                        <label for="Contact"><b>Contact Us</b></label>
+                        <label for="Contact"><h4 className="container_titles">Contact Us</h4></label>
                       </div>
                         <button className="button open-button">Contact Us <NavigateNextIcon /></button> 
                     </div>
                 </form>
             </div>
-
-
-
-
-
         </div>
     )
 };
+
+
+///CSS for "Looking for" in Editprofile.css
+
+
 
 export default Settings;

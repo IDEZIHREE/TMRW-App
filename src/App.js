@@ -9,6 +9,7 @@ import Profile from "./Profile";
 import Settings from "./Settings";
 import Editprofile from './Editprofile';
 import Email from "./Email";
+import Phonenumber from "./Phonenumber";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="profile/settings" element={<SettingsPage />} />
         <Route path="profile/editprofile" element={<EditProfilePage />} />
         <Route path="profile/settings/email" element={<EmailPage />} />
+        <Route path="profile/settings/phonenumber" element={<PhoneNumberPage />} />
       </Routes>
     </div>
   );
@@ -73,6 +75,14 @@ function EmailPage () {
   return (
     <main>
       <Email />
+    </main>
+  );
+}
+
+function PhoneNumberPage () {
+  return (
+    <main>
+      <Phonenumber />
     </main>
   );
 }
