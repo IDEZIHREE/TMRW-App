@@ -1,39 +1,53 @@
 /* Header */
 .header_style{
-    display: flex;  
-    position: sticky;
-    top: 0px;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid grey;
-    background-color: #121212;
-  }
-  
-  .header_img {
-    margin-right: auto;
-  }  
-  
-  .header_span {
-    margin-right: auto;
-    color: #FF5349;
-  }
-  
-  .navigate-back {
-    padding: 10px; /* STATIC */
-    color:rgb(61, 61, 61)
-  }
-  
-  .navigate-back:active {
-    color:#FF5349;
-  }
-  
-  .fake-back {
-    padding: 10px;
-    color: transparent;
-  }
+  display: flex;  
+  position: sticky;
+  top: 0px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid grey;
+  background-color: #121212;
+}
+.header_img {
+  margin-right: auto;
+}  
+.header_span {
+  margin-right: auto;
+  color: #FF5349;
+}
+.navigate-back {
+  padding: 10px; /* STATIC */
+  color:rgb(61, 61, 61)
+}
+.navigate-back:active {
+  color:#FF5349;
+}
+.fake-back {
+  padding: 10px;
+  color: transparent;
+}
 
-  /* Body */
-  
+/* Body */
+.open-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  cursor: pointer;
+  background-color: #121212;
+  color: white;
+  border: none;
+  width: 100%;
+  max-width: 100%;
+  border-bottom: 1px solid rgb(56, 56, 56);
+  font-size: 1rem;
+  font-family:sans-serif;
+}
+
+.open-button:hover {
+  background-color: rgb(34, 34, 34);
+}
+
 /* Account Settings */
 .account-settings {
   font-family: sans-serif;

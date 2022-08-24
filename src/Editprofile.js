@@ -10,6 +10,18 @@ import { IconButton } from "@mui/material";
 import SchoolIcon from '@mui/icons-material/School';
 import HouseIcon from '@mui/icons-material/House';
 import WorkIcon from '@mui/icons-material/Work';
+import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
+import EmojiPeopleIcon from '@mui/icons-material/EmojiPeople';
+import WhatshotIcon from '@mui/icons-material/Whatshot';
+import HeightIcon from '@mui/icons-material/Height';
+import SmokingRoomsIcon from '@mui/icons-material/SmokingRooms';
+import LiquorIcon from '@mui/icons-material/Liquor';
+import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
+import ChurchIcon from '@mui/icons-material/Church';
+import PetsIcon from '@mui/icons-material/Pets';
+import ChildFriendlyIcon from '@mui/icons-material/ChildFriendly';
+import GavelIcon from '@mui/icons-material/Gavel';
+import FlightIcon from '@mui/icons-material/Flight';
 //Buttons
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
@@ -64,24 +76,41 @@ function Editprofile () {
                         </div>
                     </div>
                 </form>
+                <h1 className="Tags">Tags</h1>
+                <br></br>
+                <br></br>
                 <h1 className="extra-about-me">Extra About Me</h1>
-                <div>
-                      <button className="button open-button">Exercise <NavigateNextIcon /></button>
-                      <dialog className="modal" id="modal">
-                        <div className="modal-header">
-                          <div className="title">How often do you exercise?</div>
-                            <button className="button close-button">&times;</button>
-                        </div>   
-                        <div className="modal-body"> 
-                              <button> Everyday </button>
-                              <button> a few times a week</button>
-                              <button> Never</button>   
-                        </div>
-                      </dialog>
+                <div className="Exercise-dropdown">
+                    <details className="custom-select">
+                      <summary className="options"><FitnessCenterIcon className="extrapage-logos"/>
+                        <input type="radio" name="Exercise" id="Exercise" title="Exercise" checked />
+                        <input type="radio" name="Workout" id="Gym Rat" title="Gym Rat" />
+                        <input type="radio" name="Workout" id="3-4 times a week" title="3-4 times a week" />
+                        <input type="radio" name="Workout" id="1-2 times a week" title="1-2 times a week" />
+                        <input type="radio" name="Workout" id="Never" title="Never" />
+                      </summary>
+                      <ul className="list">
+                        <li>
+                          <label for="Gym Rat">
+                            Gym Rat
+                            <span></span>
+                          </label>
+                        </li>
+                        <li>
+                          <label for="3-4 times a week">3-4 times a week</label>
+                        </li>
+                        <li>
+                          <label for="1-2 times a week">1-2 times a week</label>
+                        </li>
+                        <li>
+                          <label for="Never">Never</label>
+                        </li>
+                      </ul>
+                    </details>
                   </div>
                   <div className="gender-dropdown">
                     <details className="custom-select">
-                      <summary className="options">
+                      <summary className="options"> <EmojiPeopleIcon className="extrapage-logos"/>
                         <input type="radio" name="Gender" id="Gender" title="Gender" checked />
                         <input type="radio" name="gen" id="Male" title="Male" />
                         <input type="radio" name="gen" id="Female" title="Female" />
@@ -101,7 +130,7 @@ function Editprofile () {
                   </div>
                   <div className="sexual-orientation-dropdown">
                     <details className="custom-select">
-                      <summary className="radios">
+                      <summary className="radios"><WhatshotIcon className="extrapage-logos" />
                         <input type="radio" name="Sexual Orientation" id="Sexual Orientation" title="Sexual Orientation" checked />
                         <input type="radio" name="sexualO" id="Straight" title="Straight" />
                         <input type="radio" name="sexualO" id="Gay" title="Gay" />
@@ -123,165 +152,239 @@ function Editprofile () {
                       </ul>
                     </details>
                   </div>
-                  <div>
+                  <Link to="height"><HeightIcon className="extrapage-logos" />
                       <button className="button open-button">Height <NavigateNextIcon /></button>
-                      <dialog className="modal" id="modal">
-                        <div className="modal-header">
-                          <div className="title">Height</div>
-                            <button className="button close-button">&times;</button>
-                        </div>   
-                        <div className="modal-body">        
-                            <h2>How tall are you?</h2>
-                        </div>
-                      </dialog>
-                  </div>
+                  </Link>
                   <div className="smoking-dropdown">
                     <details className="custom-select">
-                      <summary className="options">
+                      <summary className="options"><SmokingRoomsIcon className="extrapage-logos"/>
                         <input type="radio" name="Smoking" id="Smoking" title="Smoking" checked />
-                        <input type="radio" name="smoke" id="Everyday" title="Everyday" />
-                        <input type="radio" name="smoke" id="A couple Times a Week" title="A couple Times a Week" />
-                        <input type="radio" name="smoke" id="Ocassionally" title="Ocassionally" />
+                        <input type="radio" name="smoke" id="Chain Smoker" title="Chain Smoker" />
+                        <input type="radio" name="smoke" id="A couple times a week" title="A couple times a week" />
+                        <input type="radio" name="smoke" id="On special occasions" title="On special occasions" />
                         <input type="radio" name="smoke" id="Socially" title="Socially" />
-                        <input type="radio" name="smoke" id="Never" title="Never" />
+                        <input type="radio" name="smoke" id="I dont smoke" title="I dont smoke" />
                       </summary>
                       <ul className="list">
                         <li>
-                          <label for="Everyday">
-                            Everyday
+                          <label for="Chain Smoker">
+                            Chain Smoker
                             <span></span>
                           </label>
                         </li>
                         <li>
-                          <label for="A couple Times a Week">A couple times a Week</label>
-                        </li>
-                        <li>
-                          <label for="Ocassionally">Occasionaly</label>
+                          <label for="A couple times a week">A couple times a week</label>
                         </li>
                         <li>
                           <label for="Socially">Socially</label>
                         </li>
                         <li>
-                          <label for="Never">Never</label>
+                          <label for="On special occasions">On special occasions</label>
+                        </li>
+                        <li>
+                          <label for="I dont smoke">I dont smoke</label>
                         </li>
                       </ul>
                     </details>
                   </div>
                   <div className="Drinking-dropdown">
                     <details className="custom-select">
-                      <summary className="options">
+                      <summary className="options"><LiquorIcon className="extrapage-logos"/>
                         <input type="radio" name="Drinking" id="Drinking" title="Drinking" checked />
-                        <input type="radio" name="drink" id="Daily" title="Daily" />
-                        <input type="radio" name="drink" id="Few" title="Few" />
-                        <input type="radio" name="drink" id="Mostly Weekends" title="Mostly Weekends" />
-                        <input type="radio" name="drink" id="Social Drinker" title="Social Drinker" />
-                        <input type="radio" name="drink" id="Never" title="Never" />
+                        <input type="radio" name="drink" id="Binge Drinker" title="Binge Drinker" />
+                        <input type="radio" name="drink" id="A few times a week" title="A few times a week" />
+                        <input type="radio" name="drink" id="Mostly weekends" title="Mostly weekends" />
+                        <input type="radio" name="drink" id="Social drinker" title="Social drinker" />
+                        <input type="radio" name="drink" id="I dont drink" title="I dont drink" />
                       </summary>
                       <ul className="list">
                         <li>
-                          <label for="Daily">
-                           Daily
+                          <label for="Binge Drinker">
+                          Binge Drinker
                             <span></span>
                           </label>
                         </li>
                         <li>
-                          <label for="Few">A couple times a Week</label>
+                          <label for="A few times a week">A couple times a week</label>
                         </li>
                         <li>
-                          <label for="Mostly Weekends">I drink on the Weekend With Friends</label>
+                          <label for="Mostly weekends">I drink on the weekend with friends</label>
                         </li>
                         <li>
-                          <label for="Social Drinker">Socially Here and There</label>
+                          <label for="Social drinker">Socially here and there</label>
                         </li>
                         <li>
-                          <label for="Never">Never</label>
+                          <label for="I dont drink">I Dont Drink</label>
+                        </li>
+                      </ul>
+                    </details>
+                  </div>
+                  <div className="zodiac-dropdown">
+                    <details className="custom-select">
+                      <summary className="options"> <AutoAwesomeIcon className="extrapage-logos"/>
+                        <input type="radio" name="Zodiac Sign" id="Zodiac Sign" title="Zodiac Sign" checked />
+                        <input type="radio" name="Zodiac" id="Aries" title="Aries" />
+                        <input type="radio" name="Zodiac" id="Taurus" title="Taurus" />
+                        <input type="radio" name="Zodiac" id="Gemini" title="Gemini" />
+                        <input type="radio" name="Zodiac" id="Cancer" title="Cancer" />
+                        <input type="radio" name="Zodiac" id="Leo" title="Leo" />
+                        <input type="radio" name="Zodiac" id="Virgo" title="Virgo" />
+                        <input type="radio" name="Zodiac" id="Libra" title="Libra" />
+                        <input type="radio" name="Zodiac" id="Scorpius" title="Scorpius" />
+                        <input type="radio" name="Zodiac" id="Sagittarius" title="Sagittarius" />
+                        <input type="radio" name="Zodiac" id="Capricornus" title="Capricornus" />
+                        <input type="radio" name="Zodiac" id="Aquarius" title="Aquarius" />
+                        <input type="radio" name="Zodiac" id="Pisces" title="Pisces" />
+
+                      </summary>
+                      <ul className="list">
+                        <li>
+                          <label for="Aries">
+                            Aries
+                            <span></span>
+                          </label>
+                        </li>
+                        <li>
+                          <label for="Taurus">Taurus</label>
+                        </li>
+                        <li>
+                          <label for="Gemini">Gemini</label>
+                        </li>
+                        <li>
+                          <label for="Cancer">Cancer</label>
+                        </li>
+                        <li>
+                          <label for="Leo">Leo</label>
+                        </li>
+                        <li>
+                          <label for="Virgo">Virgo</label>
+                        </li>
+                        <li>
+                          <label for="Libra">Libra</label>
+                        </li>
+                        <li>
+                          <label for="Scorpius">Scorpius</label>
+                        </li>
+                        <li>
+                          <label for="Sagittarius">Sagittarius</label>
+                        </li>
+                        <li>
+                          <label for="Capricornus">Capricornus</label>
+                        </li>
+                        <li>
+                          <label for="Aquarius">Aquarius</label>
+                        </li>
+                        <li>
+                          <label for="Pisces">Pisces</label>
                         </li>
                       </ul>
                     </details>
                   </div>
                   <div>
-                      <button className="button open-button">Zodiac Sign <NavigateNextIcon /></button>
-                      <dialog className="modal" id="modal">
-                        <div className="modal-header">
-                          <div className="title">Zodiac Sign</div>
-                            <button className="button close-button">&times;</button>
-                        </div>   
-                        <div className="modal-body">        
-                            <h2>What is your zodiac sign?</h2>
-                        </div>
-                      </dialog>
+                    <input type="radio" name="Pet" id="rel" title="" checked />
+                    <Link to="religion"><ChurchIcon className="extrapage-logos" />
+                        <button className="button open-button">Religion <NavigateNextIcon /></button>
+                    </Link>
                   </div>
-                  <div>
-                      <button className="button open-button">Religion <NavigateNextIcon /></button>
-                      <dialog className="modal" id="modal">
-                        <div className="modal-header">
-                          <div className="title">Religion</div>
-                            <button className="button close-button">&times;</button>
-                        </div>   
-                        <div className="modal-body">        
-                            <h2>What is your religion?</h2>
-                        </div>
-                      </dialog>
+                  <div className="Pets-dropdown">
+                    <details className="custom-select">
+                      <summary className="options"> <PetsIcon className="extrapage-logos"/>
+                        <input type="radio" name="Pets" id="Pets" title="Pets" checked />
+                        <input type="radio" name="Pet" id="Animal Lover" title="Animal Lover" />
+                        <input type="radio" name="Pet" id="Dog Person" title="Dog Person" />
+                        <input type="radio" name="Pet" id="Cat Person" title="Cat Person" />
+                        <input type="radio" name="Pet" id="People Person" title="People Person" />
+                      </summary>
+                      <ul className="list">
+                        <li>
+                          <label for="Animal Lover">
+                          Animal Lover
+                            <span></span>
+                          </label>
+                        </li>
+                        <li>
+                          <label for="Dog Person">Dog Person</label>
+                        </li>
+                        <li>
+                          <label for="Cat Person">Cat Person</label>
+                        </li>
+                        <li>
+                          <label for="People Person">People Person</label>
+                        </li>
+                      </ul>
+                    </details>
                   </div>
-                  <div>
-                      <button className="button open-button">Pets<NavigateNextIcon /></button>
-                      <dialog className="modal" id="modal">
-                        <div className="modal-header">
-                          <div className="title">Pets</div>
-                            <button className="button close-button">&times;</button>
-                        </div>   
-                        <div className="modal-body">        
-                            <h2>Do you have any pets?</h2>
-                        </div>
-                      </dialog>
+                  <div className="Kids-dropdown">
+                    <details className="custom-select">
+                      <summary className="options"> <ChildFriendlyIcon className="extrapage-logos"/>
+                        <input type="radio" name="Kids" id="Kids" title="Kids" checked />
+                        <input type="radio" name="Kid" id="I Want Kids" title="I Want Kids" />
+                        <input type="radio" name="Kid" id="Not Even Thinking About It" title="Not Even Thinking About It" />
+                        <input type="radio" name="Kid" id="I Have Kids" title="I Have Kids" />
+                      </summary>
+                      <ul className="list">
+                        <li>
+                          <label for="I Want Kids">
+                          I Want Kids
+                            <span></span>
+                          </label>
+                        </li>
+                        <li>
+                          <label for="Not Even Thinking About It">Not Even Thinking About It</label>
+                        </li>
+                        <li>
+                          <label for="I Have Kids">I Have Kids</label>
+                        </li>
+                      </ul>
+                    </details>
                   </div>
-                  <div>
-                      <button className="button open-button">Kids <NavigateNextIcon /></button>
-                      <dialog className="modal" id="modal">
-                        <div className="modal-header">
-                          <div className="title">Kids</div>
-                            <button className="button close-button">&times;</button>
-                        </div>   
-                        <div className="modal-body">        
-                            <h2>Do you have any kids?</h2>
-                        </div>
-                      </dialog>
+                  <div className="Political-dropdown">
+                    <details className="custom-select">
+                      <summary className="options"> <GavelIcon className="extrapage-logos"/>
+                        <input type="radio" name="Political Views" id="Political Views" title="Political Views" checked />
+                        <input type="radio" name="Politics" id="Republican" title="Republican" />
+                        <input type="radio" name="Politics" id="Democratic" title="Democratic" />
+                        <input type="radio" name="Politics" id="No Opinion" title="No Opinion" />
+                      </summary>
+                      <ul className="list">
+                        <li>
+                          <label for="Republican">
+                            Republican
+                            <span></span>
+                          </label>
+                        </li>
+                        <li>
+                          <label for="Democratic">Democratic</label>
+                        </li>
+                        <li>
+                          <label for="No Opinion">No Opinion</label>
+                        </li>
+                      </ul>
+                    </details>
                   </div>
-                  <div>
-                      <button className="button open-button">Political Views <NavigateNextIcon /></button>
-                      <dialog className="modal" id="modal">
-                        <div className="modal-header">
-                          <div className="title">Political Views</div>
-                            <button className="button close-button">&times;</button>
-                        </div>   
-                        <div className="modal-body">        
-                            <h2>What are your political views</h2>
-                        </div>
-                      </dialog>
-                  </div>
-                  <div>
-                      <button className="button open-button">Loooking for <NavigateNextIcon /></button>
-                      <dialog className="modal" id="modal">
-                        <div className="modal-header">
-                          <div className="title">Looking for</div>
-                            <button className="button close-button">&times;</button>
-                        </div>   
-                        <div className="modal-body">        
-                            <h2>Looking for male/female?</h2>
-                        </div>
-                      </dialog>
-                  </div>
-                  <div>
-                      <button className="button open-button">Travel <NavigateNextIcon /></button>
-                      <dialog className="modal" id="modal">
-                        <div className="modal-header">
-                          <div className="title">Travel</div>
-                            <button className="button close-button">&times;</button>
-                        </div>   
-                        <div className="modal-body">        
-                            <h2>How often do you travel? (rarely, asmuch as possible, homebody)</h2>
-                        </div>
-                      </dialog>
+                  <div className="Travel-dropdown">
+                    <details className="custom-select">
+                      <summary className="options"> <FlightIcon className="extrapage-logos"/>
+                        <input type="radio" name="Travel" id="Travel" title="Travel" checked />
+                        <input type="radio" name="Trav" id="As Much as Possible" title="As Much as Possible" />
+                        <input type="radio" name="Trav" id="When I Get The Chance" title="When I Get The Chance" />
+                        <input type="radio" name="Trav" id="Once I Get Money" title="Once I Get Money" />
+                      </summary>
+                      <ul className="list">
+                        <li>
+                          <label for="As Much as Possible">
+                          As Much as Possible
+                            <span></span>
+                          </label>
+                        </li>
+                        <li>
+                          <label for="When I Get The Chance">When I Get The Chance</label>
+                        </li>
+                        <li>
+                          <label for="Once I Get Money">Once I Get Money</label>
+                        </li>
+                      </ul>
+                    </details>
                   </div>
                   <div>
                       <button className="button open-button">Travel <NavigateNextIcon /></button>
@@ -314,4 +417,5 @@ function Editprofile () {
 
 export default Editprofile;
 
-///above about me add gender hometown ethnicity
+///male female other for gender
+///straigt gay bi other for sexal orientation

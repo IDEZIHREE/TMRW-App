@@ -8,32 +8,29 @@
   border-bottom: 1px solid grey;
   background-color: #121212;
 }
-
 .header_img {
   margin-right: auto;
 }  
-
 .header_span {
   margin-right: auto;
   color: #FF5349;
   font-size: 150%;
 }
-
 .navigate-back {
   padding: 10px; /* STATIC */
   color:rgb(61, 61, 61)
 }
-
 .navigate-back:active {
   color:#FF5349;
 }
-
 .fake-back {
   padding: 10px;
   color: transparent;
 }
-/* Bio-Extra about me */
 
+
+
+/* Bio-Extra about me */
 .container {
     padding: 16px;
     background-color: #121212;
@@ -44,7 +41,6 @@
   padding-top:10px;
   padding-left: 30px;
 }
-
 input[name = "about"] {
   padding-bottom: 50px;
   border-radius: 25px;
@@ -71,32 +67,29 @@ input[name = "pDetail"] {
     text-align: right;
     color: white;
 }
-
 input[name = "pDetail"]:focus {
     background-color: #121212;
     outline: none;
     color: white;
   }
-
 .about_me_q {
   display: flex;
 }
-
 .about_me_bio {
   display: flex;
 }
-
 .personal_details {
   padding-bottom: 10px;
   font-family: sans-serif;
 }
-
 .container_titles {
   color: #FF5349;
   font-weight: normal;
 }
 
-.extra-about-me {
+
+/* Tags Secion*/
+.Tags {
   padding: 8px;
   background-color: #121212;
   color: #FF5349;
@@ -105,51 +98,22 @@ input[name = "pDetail"]:focus {
   font-weight: normal;
 }
 
-/* Buttons */
 
-.exercise {
-  width: 100px;
-  height: 10vh;
-}
 
-.modal-body button {
-  display: flex;
-  padding: 9px 13px;
-  border: none;
-  border-bottom: 1px solid rgb(56, 56, 56);
-  max-width: 100%;
-  width: 100%;
+/* Extra About Me */
+.extra-about-me {
+  padding: 8px;
   background-color: #121212;
-  color: white;
-  cursor: pointer;
+  color: #FF5349;
+  overflow: hidden;
+  font-family:sans-serif;
+  font-weight: normal;
 }
- .modal-body button:hover {
-  background-color: rgb(34, 34, 34);
- }
-
- .gender-option {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 5px;
-  cursor: pointer;
-  background-color: #121212;
-  color: white;
-  border: none;
-  width: 100%;
-  max-width: 100%;
-  border-bottom: 1px solid rgb(56, 56, 56);
+.extrapage-logos {
+  padding-right: 5px;
+  color:  rgb(117, 117, 117)
 }
-
-.gender-option:hover {
-  background-color: rgb(34, 34, 34);
-}
-
-
-
 /* DropDown */
-
-
 .radios {
   display: flex;
   align-items: center;
@@ -163,7 +127,6 @@ input[name = "pDetail"]:focus {
   max-width: 100%;
   border-bottom: 1px solid rgb(56, 56, 56);
 }
-
 .options {
   display: flex;
   align-items: center;
@@ -178,124 +141,288 @@ input[name = "pDetail"]:focus {
   border-bottom: 1px solid rgb(56, 56, 56);
 }
 
+/* Exercise Dropdown */
+[title='Exercise'] { 
+  color:  white; 
+  margin-right: auto;
+}
+[title='Gym Rat'] { 
+  color:  grey; 
+  margin-left: auto;
+  margin-right: 5%;
+}
+[title='3-4 times a week'] { 
+  color:  grey;
+  margin-left: auto;
+  margin-right: 5%;
+}
+[title='1-2 times a week'] { 
+  color:  grey;
+  margin-left: auto;
+  margin-right: 5%;
+}
+[title='Never'] { 
+  color:  grey;
+  margin-left: auto;
+  margin-right: 5%;
+}
+          
 /*  Gender Dropdown  */
 [title='Gender'] { 
 color:  white; 
-margin-right: 25%;
+margin-right: auto;
 }
-
 [title='Male'] { 
 color:  grey; 
-margin-left: 30%;
+margin-left: auto;
+margin-right: 5%;
 }
-  
 [title='Female'] { 
 color:  grey;
-margin-left: 35%;
+margin-left: auto;
 margin-right: 5%;
 }
     
 /* Sexual Orientation Dropdown */
-
 [title='Sexual Orientation'] {
 color:  white;
-margin-right: 5%;
+margin-right: auto;
 }
-
 [title='Straight'] {
   color:  grey; 
-  margin-left: 35%;
+  margin-left: auto;
+  margin-right: 5%;
 }
-
 [title='Gay'] {
   color:  grey; 
-  margin-left: 35%;
+  margin-left: auto;
+  margin-right: 5%;
 }
-
 [title='LGBTQA+'] {
   color:  grey; 
-  margin-left: 35%;
-}
-/* Smoking Dropdown*/
-[title='Gender'] { 
-  color:  white; 
-  margin-right: 25%;
-  }
-  
-  [title='Male'] { 
-  color:  grey; 
-  margin-left: 30%;
-  }
-    
-  [title='Female'] { 
-  color:  grey;
-  margin-left: 35%;
+  margin-left: auto;
   margin-right: 5%;
-  }
-      
-  /* Sexual Orientation Dropdown */
-  
+}
+
+/* Smoking Dropdown */
 [title='Smoking'] {
   color:  white;
+  margin-right: auto;
+}
+[title='Chain Smoker'] {
+  color:  grey; 
+  margin-left: auto;
   margin-right: 5%;
 }
-
-[title='Everyday'] {
+[title='A couple times a week'] {
   color:  grey; 
-  margin-left: 35%;
+  margin-left: auto;
+  margin-right: 5%;
 }
-
-[title='A couple Times a Week'] {
+[title='On special occasions'] {
   color:  grey; 
-  margin-left: 35%;
+  margin-left: auto;
+  margin-right: 5%;
 }
-
-[title='Occasionally'] {
-  color:  grey; 
-  margin-left: 35%;
-}
-
-
 [title='Socially'] {
   color:  grey; 
-  margin-left: 35%;
+  margin-left: auto;
+  margin-right: 5%;
 }
-
-[title='Never'] {
+[title='I dont smoke'] {
   color:  grey; 
-  margin-left: 35%;
-}
-
-/* Drinking */
-[title='Drinking'] {
-  color:  white;
+  margin-left: auto;
   margin-right: 5%;
 }
 
-[title='Daily'] {
+/* Drinking Dropdown*/
+[title='Drinking'] {
+  color:  white;
+  margin-right: auto;
+}
+[title='Binge Drinker'] {
   color:  grey; 
-  margin-left: 35%;
+  margin-left: auto;
+  margin-right: 5%;
+}
+[title='A few times a week'] {
+  color:  grey; 
+  margin-left: auto;
+  margin-right: 5%;
+}
+[title='Mostly weekends'] {
+  color:  grey; 
+  margin-left: auto;
+  margin-right: 5%;
+}
+[title='Social drinker'] {
+  color:  grey; 
+  margin-left: auto;
+  margin-left: auto;
+  margin-right: 5%;
+}
+[title='I dont drink'] {
+  color:  grey; 
+  margin-left: auto;
+  margin-right: 5%;
 }
 
-[title='Few'] {
+
+/* Zodiac Sign Dropdown */
+[title='Zodiac Sign'] {
+  color:  white;
+  margin-right: auto;
+}
+[title='Aries'] {
   color:  grey; 
-  margin-left: 35%;
+  margin-left: auto;
+  margin-right: 5%;
+}
+[title='Taurus'] {
+  color:  grey; 
+  margin-left: auto;
+  margin-right: 5%;
+}
+[title='Gemini'] {
+  color:  grey; 
+  margin-left: auto;
+  margin-right: 5%;
+}
+[title='Cancer'] {
+  color:  grey; 
+  margin-left: auto;
+  margin-right: 5%;
+}
+[title='Leo'] {
+  color:  grey; 
+  margin-left: auto;
+  margin-right: 5%;
+}
+[title='Virgo'] {
+  color:  grey;
+  margin-left: auto;
+  margin-right: 5%;
+}
+[title='Libra'] {
+  color:  grey; 
+  margin-left: auto;
+  margin-right: 5%;
+}
+[title='Scorpius'] {
+  color:  grey; 
+  margin-left: auto;
+  margin-right: 5%;
+}
+[title='Sagittarius'] {
+  color:  grey; 
+  margin-left: auto;
+  margin-right: 5%;
+}
+[title='Capricornus'] {
+  color:  grey; 
+  margin-left: auto;
+  margin-right: 5%;
+}
+[title='Aquarius'] {
+  color:  grey; 
+  margin-left: auto;
+  margin-right: 5%;
+}
+[title='Pisces'] {
+  color:  grey; 
+  margin-left: auto;
+  margin-right: 5%;
 }
 
-[title='Mostly Weekends'] {
+/* Pets Dropdown */
+[title='Pets'] {
+  color:  white;
+  margin-right: auto;
+}
+[title='Animal Lover'] {
   color:  grey; 
-  margin-left: 35%;
+  margin-left: auto;
+  margin-right: 5%;
+}
+[title='Dog Person'] {
+  color:  grey; 
+  margin-left: auto;
+  margin-right: 5%;
+}
+[title='Cat Person'] {
+  color:  grey; 
+  margin-left: auto;
+  margin-right: 5%;
+}
+[title='People Person'] {
+  color:  grey; 
+  margin-left: auto;
+  margin-right: 5%;
 }
 
-[title='Social Drinker'] {
+/* Kids Dropdown*/
+[title='Kids'] {
+  color:  white;
+  margin-right: auto;
+}
+[title='I Want Kids'] {
   color:  grey; 
-  margin-left: 35%;
+  margin-left: auto;
+  margin-right: 5%;
+}
+[title='Not Even Thinking About It'] {
+  color:  grey; 
+  margin-left: auto;
+  margin-right: 5%;
+}
+[title='I Have Kids'] {
+  color:  grey; 
+  margin-left: auto;
+  margin-right: 5%;
 }
 
-[title='Never'] {
-  color:  grey; 
-  margin-left: 35%;
+/* Politcal Dropdown */
+[title='Political Views'] {
+  color:  white;
+  margin-right: auto;
 }
+[title='Republican'] {
+  color:  grey; 
+  margin-left: auto;
+  margin-right: 5%;
+}
+[title='Democratic'] {
+  color:  grey; 
+  margin-left: auto;
+  margin-right: 5%;
+}
+[title='No Opinion'] {
+  color:  grey; 
+  margin-left: auto;
+  margin-right: 5%;
+}
+
+/* Travel Dropdown */
+[title='Travel'] {
+  color:  white;
+  margin-right: auto;
+}
+[title='As Much as Possible'] {
+  color:  grey; 
+  margin-left: auto;
+  margin-right: 5%;
+}
+[title='When I Get The Chance'] {
+  color:  grey; 
+  margin-left: auto;
+  margin-right: 5%;
+}
+[title='Once I Get Money'] {
+  color:  grey; 
+  margin-left: auto;
+  margin-right: 5%;
+}
+
 
 /* Dropdown List */
 .details {
@@ -303,11 +430,9 @@ margin-right: 5%;
 	width: 300px;
 	margin-right: 1rem;
 }
-
 .details[open] {
 	z-index: 1;
 }
-
 .summary {
 	padding: 1rem;
 	cursor: pointer;
@@ -315,12 +440,9 @@ margin-right: 5%;
 	background-color: #ddd;
 	list-style: none;
 }
-
 .summary::-webkit-details-marker {
 	display: none;
- 
 }
-
 .details[open] summary:before {
 	content: '';
 	display: block;
@@ -332,11 +454,9 @@ margin-right: 5%;
 	left: 0;
   max-width: 100%;
 }
-
 summary:hover{
   background-color: rgb(34, 34, 34);
 }
-
 summary:after {
   content: '';
 	display: inline-block;
@@ -350,11 +470,9 @@ summary:after {
 	transform-origin: center center;
 	transition: ease-in-out 100ms;
 }
-
 details[open] summary:after {
 	transform: rotate(-45deg) translate(0%, 0%);
 }
-
 ul {
 	width: 90%;
 	background:#121212 ;
@@ -368,29 +486,23 @@ ul {
 	border-radius: 5px;
 	max-height: 300px;
 	overflow-y: auto;
-
   border-width: 1px;
   list-style-type: none;
 }
-
 li {
 	margin: 0;
 	padding: 1rem 0;
 	border-bottom: 1px solid #FF5349;
 }
-
 li:first-child {
 	padding-top: 0;
 }
-
 li:last-child {
   padding: 1rem 0;
 	border-bottom: 1px solid #FF5349;
 }
 
 /* FAKE SELECT */
-
-
 summary.radios:before {
 	content: var(--selection);
 }
@@ -401,26 +513,21 @@ input[type=radio] {
 	appearance: none;
 	display: none;
 }
-
 input[type=radio]:checked {
 	display: inline;
 	--display: block;
 }
-
 input[type=radio]:after {
 	content: attr(title);
 	display: inline;
 	font-size: 1rem;
 }
-
-
 label {
 	width: 100%;
 	display: flex;
 	cursor: pointer;
 	justify-content: space-between;
 }
-
 label span {
 	--display: none;
 	display: var(--display);

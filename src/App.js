@@ -10,6 +10,9 @@ import Settings from "./Settings";
 import Editprofile from './Editprofile';
 import Email from "./Email";
 import Phonenumber from "./Phonenumber";
+import Religion from "./Religion";
+import Height from "./Height";
+import Signin from "./Signin";
 
 function App() {
   return (
@@ -19,21 +22,16 @@ function App() {
         <Route path="chat" element={<Chat />} />
         <Route path="chat/:person" element={<ChatScreenFunction />} />
         <Route path="profile" element={<ProfilePage />} />
+        <Route path="/signin" element={<SignInPage />} />
         <Route path="profile/settings" element={<SettingsPage />} />
-        <Route path="profile/editprofile" element={<EditProfilePage />} />
         <Route path="profile/settings/email" element={<EmailPage />} />
         <Route path="profile/settings/phonenumber" element={<PhoneNumberPage />} />
+        <Route path="profile/editprofile" element={<EditProfilePage />} />
+        <Route path="profile/editprofile/religion" element={<ReligionPage />} />
+        <Route path="profile/editprofile/height" element={<HeightPage />} />
       </Routes>
     </div>
   );
-}
-
-function Chat () {
-  return (
-    <main>
-      <Chats />
-    </main>
-  )
 }
 
 function Home() {
@@ -45,6 +43,22 @@ function Home() {
   );
 }
 
+function SignInPage () {
+  return (
+    <main>
+      <Signin />
+    </main>
+  );
+}
+
+//ChatPages
+function Chat () {
+  return (
+    <main>
+      <Chats />
+    </main>
+  )
+}
 
 function ChatScreenFunction() {
   return (
@@ -61,8 +75,8 @@ function ProfilePage () {
     </main>
   );
 }
-///Settings Pages
 
+//Settings Pages
 function SettingsPage () {
   return (
     <main>
@@ -88,7 +102,7 @@ function PhoneNumberPage () {
 }
 
 
-
+//EditProfile Pages
 function EditProfilePage () {
   return (
     <main>
@@ -97,7 +111,20 @@ function EditProfilePage () {
   );
 }
 
+function ReligionPage () {
+  return (
+    <main>
+      <Religion />
+    </main>
+  );
+}
 
-
+function HeightPage () {
+  return (
+    <main>
+      <Height />
+    </main>
+  );
+}
 
 export default App;

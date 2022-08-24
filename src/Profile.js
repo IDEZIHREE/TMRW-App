@@ -17,7 +17,11 @@ function Profile ({ profilePic, name, age }) {
     return (
         <div className="profile">
           <Header />
-            <img className="profile_picture" src={profilePic} alt="profile-pic" />
+            <div className="profilepic-background">
+                <div className="picture">
+                <img className="profile_picture" src={profilePic} alt="profile-pic" />
+                </div>
+            </div>
             <div className="profile_info">
                 <h2>{name}, {age}</h2>
             </div>
@@ -31,26 +35,29 @@ function Profile ({ profilePic, name, age }) {
                     <button>Contact</button>
             </div>
             <div className="log_out">
+            <Link to ="/signin">
                 <button>Log out</button>
+            </Link>
             </div>
-            <div className="delete">
-                <button className="button open-button">Delete my account</button>
+            <button className="button delete-button">Delete my account</button>
                 <dialog className="modal" id="modal">
                 <div className="modal-header">
-                    <div className="title">Are you sure you want to delete your account?</div>
+                    <div className="title">Delete your Account</div>
                     <button className="button close-button">&times;</button>
                 </div>   
                 <div className="modal-body"> 
-                    <p>You will have to sign in within 30 days to keep your account or it will be lost</p>
-                    <button className="button end-account"> Yes delete my account </button>
+                    <p>You will have to sign in within 30 days to keep your account or it will be lost. Are you sure you wish to delete your account?</p>
                 </div>
+            <Link to="/signin">
+            <button className="button end-account"> Yes delete my account </button>
+            </Link>
                 </dialog>
-            </div>
+
         <Footer />
         </div>
     );
 };
-
+//Link delete button to sign in page
 function ProfileInformations () {
     return (
         <div className="profile_extras">
