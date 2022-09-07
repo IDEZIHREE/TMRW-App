@@ -6,21 +6,21 @@
 .profile_info {
     font-size: 15px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     margin: auto;
+    margin-left: 20px;
     align-items: center;
-    flex-wrap: nowrap;
     padding: 12px 0 16px;
-    width: 125px;
 }
 
 .profilepic-background {
     padding: 30px 0 0px;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
     background-color: #121212;
     text-align: center;
     overflow: hidden;
     position: relative;
+    
 }
 .profilepic-background .picture::before{
     content: "";
@@ -35,6 +35,7 @@
     transform: scale(3);
     transition: all 0.3s linear 0s;
   }
+
 .profilepic-background .picture {
     display: inline-block;
     height: 130px;
@@ -50,7 +51,9 @@
   transform: scale(1);
 }
 
-
+.edit-name-icon {
+    color: white;
+}
 
 /* Button Group */
 .button_group button {

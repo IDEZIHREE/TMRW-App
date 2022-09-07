@@ -64,7 +64,60 @@
 .Location {
   font-family: sans-serif;
 }
+.location-range {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  background-color: #121212;
+  color: white;
+  border: none;
+  width: 95.5%;
+  max-width: 100%;
+  font-size: 1rem;
+  font-family:sans-serif;
+}
 
+input[type=range] {
+  height: 38px;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+  background-color: #121212;
+}
+input[type=range]:focus {
+  outline: none;
+}
+.slider {
+  border-bottom: 1px solid rgb(56, 56, 56);
+  padding-bottom: 10px;
+}
+/* Slider Track edit */
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000;
+  background: grey;
+  border-radius: 5px;
+  border: 1px solid #000000;
+}
+/* Change slider circle*/
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #000000;
+  border: 1px solid #000000;
+  height: 30px;
+  width: 11px;
+  border-radius: 20px;
+  background: #FF5349;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -11px;
+}
+/* when slider moves color */
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: grey;
+}
 
 /* Preferences Settings */
 .Preferences {
@@ -77,17 +130,72 @@
   font-family: 'Courier New', Courier, monospace;
   padding: 6px 0px;
 }
-
 [title='Looking For'] { 
   color:  white; 
   margin-right: 25%;
-  }
+}
 
 /* Extra Settings */
 .Extra-settings {
   font-family: sans-serif;
 }
-
+.read-receipt {
+  padding: 8px 10px;
+  background-color: #121212;
+  color: white;
+  border: none;
+  max-width: 100%;
+  font-size: 1rem;
+  font-family:sans-serif;
+  border-bottom: 1px solid rgb(56, 56, 56);
+  padding-bottom: 10px;
+}
+.toggle {
+  cursor: pointer;
+}
+/* Outer circle for switch */
+.toggle-switch {
+  display: flex;
+  margin-left: 80%;
+  max-width: 100%;
+  background: grey;
+  border-radius: 16px;
+  width: 58px;
+  height: 32px;
+  position: relative;
+  vertical-align: middle;
+  transition: 0.25s;
+}
+.toggle-switch:before, .toggle-switch:after {
+  content: "";
+}
+/* inner circle in switch */
+.toggle-switch:before {
+  display: block;
+  background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  transition:0.25s;
+}
+.toggle:hover .toggle-switch:before {
+  background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+}
+.toggle-checkbox:checked + .toggle-switch {
+  background: #FF5349;
+}
+/* controlls left to right switch motion*/
+.toggle-checkbox:checked + .toggle-switch:before {
+  left: 30px;
+}
+.toggle-checkbox {
+  visibility: hidden;
+}
 /* Legal Settings */
 .Legal {
   font-family: sans-serif;

@@ -22,6 +22,7 @@ import PetsIcon from '@mui/icons-material/Pets';
 import ChildFriendlyIcon from '@mui/icons-material/ChildFriendly';
 import GavelIcon from '@mui/icons-material/Gavel';
 import FlightIcon from '@mui/icons-material/Flight';
+import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 //Buttons
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
@@ -76,7 +77,14 @@ function Editprofile () {
                         </div>
                     </div>
                 </form>
-                <h1 className="Tags">Tags</h1>
+                <h1 className="Tags">Tags <LocalOfferIcon /></h1>
+                <br></br>
+                <br></br>
+                <div>
+                  <div className="tags-info">
+                    <label for="Tags Info"><b>By adding tags to your account you can show others your interests at a glance.</b></label>
+                  </div>
+                </div>
                 <br></br>
                 <br></br>
                 <h1 className="extra-about-me">Extra About Me</h1>
@@ -134,7 +142,7 @@ function Editprofile () {
                         <input type="radio" name="Sexual Orientation" id="Sexual Orientation" title="Sexual Orientation" checked />
                         <input type="radio" name="sexualO" id="Straight" title="Straight" />
                         <input type="radio" name="sexualO" id="Gay" title="Gay" />
-                        <input type="radio" name="sexualO" id="LGBTQA+" title="LGBTQA+" />
+                        <input type="radio" name="sexualO" id="Bisexual" title="Bisexual" />
                       </summary>
                       <ul className="list">
                         <li>
@@ -147,14 +155,16 @@ function Editprofile () {
                           <label for="Gay">Gay</label>
                         </li>
                         <li>
-                          <label for="LGBTQA+">LGBTQA+</label>
+                          <label for="Bisexual">Bisexual</label>
                         </li>
                       </ul>
                     </details>
                   </div>
-                  <Link to="height"><HeightIcon className="extrapage-logos" />
-                      <button className="button open-button">Height <NavigateNextIcon /></button>
+                  <div>
+                  <Link to="height">
+                      <button className="height-button"><HeightIcon className="extrapage-logos" />Height </button>
                   </Link>
+                  </div>
                   <div className="smoking-dropdown">
                     <details className="custom-select">
                       <summary className="options"><SmokingRoomsIcon className="extrapage-logos"/>
@@ -281,9 +291,10 @@ function Editprofile () {
                     </details>
                   </div>
                   <div>
-                    <input type="radio" name="Pet" id="rel" title="" checked />
-                    <Link to="religion"><ChurchIcon className="extrapage-logos" />
-                        <button className="button open-button">Religion <NavigateNextIcon /></button>
+                    <input type="radio" name="religion" id="rel" title="" checked />
+                    <Link to="religion">
+                        <button className="religion-button"><ChurchIcon className="extrapage-logos" />Religion </button>
+                       
                     </Link>
                   </div>
                   <div className="Pets-dropdown">

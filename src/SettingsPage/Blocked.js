@@ -1,17 +1,23 @@
 import React from "react";
-import "./Signin.css";
+import "./Blocked.css"
+import { Link } from "react-router-dom";
 //Header Icons
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
+import { IconButton } from "@mui/material";
 
-
-function Signin () {
+function Blocked () {
     return (
         <div>
             <div className="header_style">
             <div className="header_img">
+                <IconButton>
+                <Link to="/profile/settings" >
+                    <NavigateBeforeIcon className="navigate-back" fontSize="large"/>
+                </Link>
+                </IconButton>
             </div>
             <span className="header_span">
-                Sign In
+                Blocked Contacts
             </span>
             <div>
                 <NavigateBeforeIcon className="fake-back" fontSize="large"/>
@@ -21,4 +27,6 @@ function Signin () {
     )
 };
 
-export default Signin;
+
+    
+export default Blocked;

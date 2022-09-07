@@ -98,7 +98,12 @@ input[name = "pDetail"]:focus {
   font-weight: normal;
 }
 
-
+.tags-info {
+  font-size: 80%;
+  color: grey;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 6px 15px;
+}
 
 /* Extra About Me */
 .extra-about-me {
@@ -198,10 +203,30 @@ margin-right: auto;
   margin-left: auto;
   margin-right: 5%;
 }
-[title='LGBTQA+'] {
+[title='Bisexual'] {
   color:  grey; 
   margin-left: auto;
   margin-right: 5%;
+}
+/* Height */
+
+.height-button {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  cursor: pointer;
+  background-color: #121212;
+  color: white;
+  border: none;
+  width: 100%;
+  max-width: 100%;
+  border-bottom: 1px solid rgb(56, 56, 56);
+  font-size: 1rem;
+  font-family:sans-serif;
+}
+
+.height-button:hover {
+  background-color: rgb(34, 34, 34);
 }
 
 /* Smoking Dropdown */
@@ -332,6 +357,28 @@ margin-right: auto;
   color:  grey; 
   margin-left: auto;
   margin-right: 5%;
+}
+
+
+/* Religion */
+.religion-button {
+  content: '';
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  cursor: pointer;
+  background-color: #121212;
+  color: white;
+  border: none;
+  width: 100%;
+  max-width: 100%;
+  border-bottom: 1px solid rgb(56, 56, 56);
+  font-size: 1rem;
+  font-family:sans-serif;
+}
+
+.religion-button:hover {
+  background-color: rgb(34, 34, 34);
 }
 
 /* Pets Dropdown */

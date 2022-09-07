@@ -1,6 +1,7 @@
-import React from "react";
+
 import "./Settings.css";
 import { Link } from "react-router-dom";
+import React, { useState } from "react";
 //Header Icons
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import { IconButton } from "@mui/material";
@@ -9,6 +10,10 @@ import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
 
 function Settings () {
+
+
+  const [value, setValue] = useState(0);
+  
     return (
         <div>
             <div className="header_style">
@@ -44,10 +49,21 @@ function Settings () {
                     <br></br>
                     <br></br>
                       <div className="Location">
-                        <label for="Location"><h4 className="container_titles">Location</h4></label>
+                        <label for="Location Section"><h4 className="container_titles">Location</h4></label>
                       </div>
+                      <Link to="location">
                         <button className="button open-button">Location <NavigateNextIcon /></button>
-                        <button className="button open-button">Location Range <NavigateNextIcon /></button>
+                      </Link>
+                        <div className="location-range">Location Range <NavigateNextIcon /></ div>
+                          <input className="slider"
+                            type="range"
+                            min="0"
+                            max="100"
+                            value={value}
+                            onChange={(e) => setValue(e.target.value)}
+                            step="5"
+                          />
+                 
                     <br></br>
                     <br></br>
                       <div className="Preferences">
@@ -74,6 +90,7 @@ function Settings () {
                           </details>
                         </div>
                         <button className="button open-button">Age Range <NavigateNextIcon /></button>
+                 
                         <button className="button open-button">Languages <NavigateNextIcon /></button>
                       <div className="preferences-info">
                         <label for="Preferences Info"><b>Add you preferences to find people that fit your liking.</b></label>
@@ -82,8 +99,15 @@ function Settings () {
                       <div className="Extra-settings">
                         <label for="Extra Settings"><h4 className="container_titles">Extra Settings</h4></label>
                       </div>
-                        <button className="button open-button">Read Receipts <NavigateNextIcon /></button> 
+                      <div className="read-receipt">Read Receipt 
+                        <label className="toggle">
+                            <input className="toggle-checkbox" type="checkbox" />
+                            <div className="toggle-switch"></div>
+                          </label>
+                      </div>
+                      <Link to="blocked">
                         <button className="button open-button">Blocked Contacts <NavigateNextIcon /></button> 
+                      </Link>
                         <button className="button open-button">Languages <NavigateNextIcon /></button> 
                         <button className="button open-button">Languages <NavigateNextIcon /></button> 
                     <br></br> 
@@ -95,6 +119,7 @@ function Settings () {
                         <button className="button open-button">Privacy Policy <NavigateNextIcon /></button> 
                         <button className="button open-button">Cookies <NavigateNextIcon /></button> 
                     <br></br> 
+                    
                       <div className="Contact">
                         <label for="Contact"><h4 className="container_titles">Contact Us</h4></label>
                       </div>
@@ -107,8 +132,10 @@ function Settings () {
 };
 
 
+
+
 ///CSS for "Looking for" in Editprofile.css
 
-
+///figure out why read receipt isnt centered
 
 export default Settings;

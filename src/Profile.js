@@ -11,7 +11,7 @@ import { IconButton } from "@mui/material";
 import PersonIcon from '@mui/icons-material/Person';
 import QuestionAnswerRoundedIcon from '@mui/icons-material/QuestionAnswerRounded';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-
+import EditIcon from '@mui/icons-material/Edit';
 
 function Profile ({ profilePic, name, age }) {
     return (
@@ -24,6 +24,9 @@ function Profile ({ profilePic, name, age }) {
             </div>
             <div className="profile_info">
                 <h2>{name}, {age}</h2>
+                <EditIcon
+                    className="edit-name-icon"
+                />
             </div>
             <div className="button_group">
                 <Link to="settings">
@@ -32,7 +35,9 @@ function Profile ({ profilePic, name, age }) {
                 <Link to="editprofile">
                     <button>EditProfile</button>
                 </Link>
+                <Link to="contactus">
                     <button>Contact</button>
+                </Link>
             </div>
             <div className="log_out">
             <Link to ="/signin">
@@ -149,6 +154,7 @@ function Footer() {
         </div>
     )
 }
+
 
 
 export default ProfileInformations;
