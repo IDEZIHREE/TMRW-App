@@ -1,11 +1,11 @@
-import { React, useState } from "react";
-import "./Location.css"
+import React from "react";
+import "./TOS.css"
 import { Link } from "react-router-dom";
 //Header Icons
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import { IconButton } from "@mui/material";
 
-function Location () {
+function TOS () {
     return (
         <div>
             <div className="header_style">
@@ -17,7 +17,7 @@ function Location () {
                 </IconButton>
             </div>
             <span className="header_span">
-                Location
+                Terms Of Service
             </span>
             <div>
                 <NavigateBeforeIcon className="fake-back" fontSize="large"/>
@@ -29,4 +29,4 @@ function Location () {
 
 
     
-export default Location;
+export default TOS;

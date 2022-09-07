@@ -1,4 +1,3 @@
-
 import "./Settings.css";
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
@@ -114,10 +113,18 @@ function Settings () {
                       <div className="Legal">
                         <label for="Legal"><h4 className="container_titles">Legal</h4></label>
                       </div>
+                      <Link to="TermsOfService">
                         <button className="button open-button">Terms of Service <NavigateNextIcon /></button> 
-                        <button className="button open-button">License <NavigateNextIcon /></button> 
-                        <button className="button open-button">Privacy Policy <NavigateNextIcon /></button> 
+                      </Link>
+                      <Link to="License">
+                        <button className="button open-button">License <NavigateNextIcon /></button>
+                      </Link>
+                      <Link to="PrivacyPolicy">
+                        <button className="button open-button">Privacy Policy <NavigateNextIcon /></button>
+                      </Link>
+                      <Link to="Cookies">
                         <button className="button open-button">Cookies <NavigateNextIcon /></button> 
+                      </Link>
                     <br></br> 
                     
                       <div className="Contact">

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./ChatScreen.css";
-import "./Footer.css";
+import "./MessagesPage.css";
+import "../Footer.css";
 import { Link } from "react-router-dom";
 //ICONS
 import NightlightRoundedIcon from '@mui/icons-material/NightlightRounded';
@@ -10,7 +10,7 @@ import QuestionAnswerRoundedIcon from '@mui/icons-material/QuestionAnswerRounded
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
 
-function ChatScreen () {
+function MessagesPage () {
     const [input, setInput] = useState("");
     const [messages, setMessages] = useState ([
         {
@@ -147,7 +147,7 @@ function Footer() {
     )
 }
 
-export default ChatScreen;
+export default MessagesPage;
 
 
 ///photo on top not every line

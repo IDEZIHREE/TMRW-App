@@ -1,8 +1,8 @@
 import { React, useState } from "react";
-import "./Chats.css";
+import "./ChatPreview.css";
 import Chat from "./Chat";
-import Header from './Header';
-import "./Footer.css";
+import Header from "../Header";
+import "../Footer.css";
 import NightlightRoundedIcon from '@mui/icons-material/NightlightRounded';
 import { IconButton } from "@mui/material";
 import PersonIcon from '@mui/icons-material/Person';
@@ -11,7 +11,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import { Link } from "react-router-dom";
 
 
-function Chats () {
+function ChatPreview () {
     return (
         <div>
             <Header />
@@ -114,4 +114,4 @@ function Footer() {
     )
 }
 
-export default Chats;
+export default ChatPreview;

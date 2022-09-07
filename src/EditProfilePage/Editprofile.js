@@ -1,7 +1,7 @@
 import React from "react";
 import "./Editprofile.css"
-import "./Popup";
-import "./Popup.css";
+import "../Popup";
+import "../Popup.css";
 import { Link } from "react-router-dom";
 //Header Icon
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';

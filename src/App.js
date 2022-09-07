@@ -2,22 +2,28 @@ import React from 'react';
 import { Routes, Route } from "react-router-dom";
 import Signin from "./Signin";
 import './App.css';
-import Chats from "./Chats";
-import ChatScreen from "./ChatScreen";
 import TinderCardsNew from './TinderCardsNew';
 import SwipeButtons from './SwipeButtons';
 import Profile from "./Profile";
 import Contactus from "./Contact";
+//Messages Imports
+import ChatPreview from "./Messages/ChatPreview";
+import MessagesPage from "./Messages/MessagesPage";
 //Settings Imports
-import Settings from "./Settings";
-import Email from "./Email";
-import Phonenumber from "./Phonenumber";
-import Location from "./Location";
+import Settings from "./SettingsPage/Settings";
+import Email from "./SettingsPage/Email";
+import Phonenumber from "./SettingsPage/Phonenumber";
+import Location from "./SettingsPage/Location";
 import Blocked from "./SettingsPage/Blocked";
+    //Legal
+import TermsOfService from "./SettingsPage/LegalFolder/TOS";
+import License from "./SettingsPage/LegalFolder/License";
+import PrivacyPolicy from "./SettingsPage/LegalFolder/PrivacyPolicy";
+import Cookies from "./SettingsPage/LegalFolder/Cookies";
 //EditProfile Imports
-import Editprofile from './Editprofile';
-import Religion from "./Religion";
-import Height from "./Height";
+import Editprofile from './EditProfilePage/Editprofile';
+import Religion from "./EditProfilePage/Religion";
+import Height from "./EditProfilePage/Height";
 
 
 
@@ -26,14 +32,18 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="chat" element={<Chat />} />
-        <Route path="chat/:person" element={<ChatScreenFunction />} />
+        <Route path="chat" element={<CPreview />} />
+        <Route path="chat/:person" element={<Messages />} />
         <Route path="profile" element={<ProfilePage />} />
         <Route path="/signin" element={<SignInPage />} />
         <Route path="profile/settings" element={<SettingsPage />} />
         <Route path="profile/settings/email" element={<EmailPage />} />
         <Route path="profile/settings/phonenumber" element={<PhoneNumberPage />} />
         <Route path="profile/settings/location" element={<LocationPage />} />
+        <Route path="profile/settings/TermsOfService" element={<TermsOfServicePage />} />
+        <Route path="profile/settings/License" element={<LicensePage />} />
+        <Route path="profile/settings/PrivacyPolicy" element={<PrivacyPolicyPage />} />
+        <Route path="profile/settings/Cookies" element={<CookiesPage />} />
         <Route path="profile/settings/blocked" element={<BlockedPage />} />
         <Route path="profile/editprofile" element={<EditProfilePage />} />
         <Route path="profile/editprofile/religion" element={<ReligionPage />} />
@@ -62,18 +72,18 @@ function SignInPage () {
 }
 
 //ChatPages
-function Chat () {
+function CPreview() {
   return (
     <main>
-      <Chats />
+      <ChatPreview />
     </main>
   )
 }
 
-function ChatScreenFunction() {
+function Messages() {
   return (
       <main>
-        <ChatScreen />
+        <MessagesPage />
       </main>
   );
 }
@@ -116,7 +126,7 @@ function LocationPage () {
     <main>
       <Location />
     </main>
-  )
+  );
 }
 
 function BlockedPage () {
@@ -124,8 +134,40 @@ function BlockedPage () {
     <main>
       <Blocked />
     </main>
-  )
+  );
 }
+
+function TermsOfServicePage () {
+  return (
+    <main>
+      <TermsOfService />
+    </main>
+  );
+}
+
+function LicensePage () {
+  return (
+    <main>
+      <License />
+    </main>
+  );
+}
+function PrivacyPolicyPage () {
+  return (
+    <main>
+      <PrivacyPolicy />
+    </main>
+  );
+}
+
+function CookiesPage () {
+  return (
+    <main>
+      <Cookies />
+    </main>
+  );
+}
+
 //EditProfile Pages
 function EditProfilePage () {
   return (
