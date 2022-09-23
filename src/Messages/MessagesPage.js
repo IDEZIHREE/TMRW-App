@@ -113,6 +113,7 @@ function Footer() {
             </Link>
             </IconButton>
             <IconButton>
+            <Link to="/premium">
                 <FavoriteIcon 
                     style={{
                         color: isActive1 ? '#FF5349' : '',
@@ -120,6 +121,7 @@ function Footer() {
                     className="titleIcon"
                     onClick={handleClick1} 
                     fontSize="large" />
+            </Link >
             </IconButton>
             <IconButton>
             <Link to="/chat">
