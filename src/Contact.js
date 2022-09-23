@@ -30,9 +30,13 @@ function Contact () {
             <div className="contact-other">
                 <h1 className="contact-us">Other Ways of Contacting Us</h1>
                 <div className="contact-categories">
-                    <h3>Twitter</h3>
+                    <h3>Twitter:</h3>
                     <br></br>
-                    <h3>Instagram</h3>
+                    <h3>Instagram:</h3>
+                    <br></br>
+                    <h3>Facebook:</h3>
+                    <br></br>
+                    <h3>Go online to wwww.----------.com to view our frequenetly asked questions</h3>
                 </div>
             </div>
         </div>

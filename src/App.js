@@ -6,6 +6,8 @@ import TinderCardsNew from './TinderCardsNew';
 import SwipeButtons from './SwipeButtons';
 import Profile from "./Profile";
 import Contactus from "./Contact";
+import Premium from "./Premium";
+import Filters from "./Filters";
 //Messages Imports
 import ChatPreview from "./Messages/ChatPreview";
 import MessagesPage from "./Messages/MessagesPage";
@@ -32,10 +34,12 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/premium" element={<PremiumPage />} />
         <Route path="chat" element={<CPreview />} />
         <Route path="chat/:person" element={<Messages />} />
         <Route path="profile" element={<ProfilePage />} />
         <Route path="/signin" element={<SignInPage />} />
+        <Route path="/filters" element={<FiltersPage />} />
         <Route path="profile/settings" element={<SettingsPage />} />
         <Route path="profile/settings/email" element={<EmailPage />} />
         <Route path="profile/settings/phonenumber" element={<PhoneNumberPage />} />
@@ -62,7 +66,13 @@ function Home() {
       </main>
   );
 }
-
+function PremiumPage (){
+  return (
+    <main>
+      <Premium />
+    </main>
+  );
+}
 function SignInPage () {
   return (
     <main>
@@ -70,14 +80,20 @@ function SignInPage () {
     </main>
   );
 }
-
+function FiltersPage () {
+  return (
+    <main>
+      <Filters />
+    </main>
+  );
+}
 //ChatPages
 function CPreview() {
   return (
     <main>
       <ChatPreview />
     </main>
-  )
+  );
 }
 
 function Messages() {

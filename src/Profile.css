@@ -12,7 +12,6 @@
     align-items: center;
     padding: 12px 0 16px;
 }
-
 .profilepic-background {
     padding: 30px 0 0px;
     margin-bottom: 5px;
@@ -20,7 +19,6 @@
     text-align: center;
     overflow: hidden;
     position: relative;
-    
 }
 .profilepic-background .picture::before{
     content: "";
@@ -34,8 +32,7 @@
     left: 0px;
     transform: scale(3);
     transition: all 0.3s linear 0s;
-  }
-
+}
 .profilepic-background .picture {
     display: inline-block;
     height: 130px;
@@ -45,16 +42,14 @@
     position: relative;
 }
 .profilepic-background .picture img {
-  width: 75%;
-  height: auto;
-  border-radius: 50%;
-  transform: scale(1);
+    width: 75%;
+    height: auto;
+    border-radius: 50%;
+    transform: scale(1);
 }
-
 .edit-name-icon {
     color: white;
 }
-
 /* Button Group */
 .button_group button {
     background-color: #121212;
@@ -80,7 +75,7 @@
 }
 .log_out button {
     margin: auto;
-    margin-top: 40%;
+    margin-top: 30%;
     display: block;
     position: relative;
     height: 2vh;
@@ -92,7 +87,6 @@
     font-weight: bold;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
-
 
 /* Delete Button CSS*/
 .delete-button {
@@ -109,7 +103,6 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
-
 /* Delete Buttons modal*/
 .modal {
     position: fixed;
@@ -123,7 +116,7 @@
     max-width: 80%;
     z-index: 10;
     transition: 200ms ease-in-out;
-    }
+}
 .modal-header {
     padding:  10px 15px;
     display: flex;

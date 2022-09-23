@@ -397,29 +397,8 @@ function Editprofile () {
                       </ul>
                     </details>
                   </div>
-                  <div>
-                      <button className="button open-button">Travel <NavigateNextIcon /></button>
-                      <dialog className="modal" id="modal">
-                        <div className="modal-header">
-                          <div className="title">Travel</div>
-                            <button className="button close-button">&times;</button>
-                        </div>   
-                        <div className="modal-body">        
-                            <h2>How often do you travel? (rarely, asmuch as possible, homebody)</h2>
-                        </div>
-                      </dialog>
-                  </div>
-                  <div>
-                      <button className="button open-button">Travel <NavigateNextIcon /></button>
-                      <dialog className="modal" id="modal">
-                        <div className="modal-header">
-                          <div className="title">Travel</div>
-                            <button className="button close-button">&times;</button>
-                        </div>   
-                        <div className="modal-body">        
-                            <h2>How often do you travel? (rarely, asmuch as possible, homebody)</h2>
-                        </div>
-                      </dialog>
+                  <div className="extra-about-me-info">
+                    <label for="Extra About Me Info"><b>By including more information in the extra about me section you show your matches some of your interests and beliefs.</b></label>
                   </div>
             </div>
         </div>
@@ -428,5 +407,3 @@ function Editprofile () {
 
 export default Editprofile;
 
-///male female other for gender
-///straigt gay bi other for sexal orientation

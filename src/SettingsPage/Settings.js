@@ -1,6 +1,6 @@
 import "./Settings.css";
 import { Link } from "react-router-dom";
-import React, { useState } from "react";
+import React from "react";
 //Header Icons
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import { IconButton } from "@mui/material";
@@ -11,8 +11,7 @@ import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 function Settings () {
 
 
-  const [value, setValue] = useState(0);
-  
+
     return (
         <div>
             <div className="header_style">
@@ -53,15 +52,31 @@ function Settings () {
                       <Link to="location">
                         <button className="button open-button">Location <NavigateNextIcon /></button>
                       </Link>
-                        <div className="location-range">Location Range <NavigateNextIcon /></ div>
-                          <input className="slider"
-                            type="range"
-                            min="0"
-                            max="100"
-                            value={value}
-                            onChange={(e) => setValue(e.target.value)}
-                            step="5"
-                          />
+                      <div className="slider-body">
+                        <div className="wrapper">
+                          <header>
+                            <h2 className="age-range-slider">Age Range</h2>
+                          </header>
+                          <div className="price-input">
+                            <div className="field">
+                              <span>Min</span>
+                              <input type="number" className="input-min" value="2500" />
+                            </div>
+                            <div className="seperator"> - </div>
+                            <div className="field">
+                              <span>Max</span>
+                              <input type="number" className="input-max" value="7500" />
+                            </div>  
+                          </div>
+                          <div className="slider">
+                            <div className="progress"></div>
+                          </div>
+                          <div className="range-input">
+                            <input type="range" className="range-min" min="0" max="10000" value="2500" steps="100" />
+                            <input type="range" className="range-max" min="0" max="10000" value="7500" steps="100"/>
+                          </div>
+                        </div>
+                      </div>
                  
                     <br></br>
                     <br></br>
@@ -139,10 +154,54 @@ function Settings () {
 };
 
 
+const rangeInput = document.querySelectorAll(".range-input input"),
+priceInput = document.querySelectorAll(".price-input input"),
+progress = document.querySelector(".slider .progress");
 
+let priceGap = 1000;
+
+priceInput.forEach(input =>{
+  input.addEventListener("input", e =>{
+    //getting two inputs value and parsing them to number
+    let minVal = parseInt(priceInput[0].value);
+    let maxVal = parseInt(priceInput[1].value);
+
+    if((maxVal- minVal >= priceGap) && maxVal <= 10000){
+        if(e.target.className === "input-min"){ //if active input is min input
+          rangeInput[0].value = minVal;
+          progress.style.left = (minVal / rangeInput[0].max) * 100 + "%";
+        }else{
+          priceInput[1].value = maxVal;
+          progress.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+        }
+     }
+  });
+});
+
+rangeInput.forEach(input =>{
+  input.addEventListener("input", e =>{
+    //getting two ranges value and parsing them to number
+    let minVal = parseInt(rangeInput[0].value);
+    let maxVal = parseInt(rangeInput[1].value);
+
+    if(maxVal- minVal < priceGap){
+        if(e.target.className === "range-min"){ //if active slider is min slider
+          rangeInput[0].value = maxVal - priceGap;
+      }else{
+          rangeInput[1].value = minVal + priceGap;
+      }
+    }else{
+      priceInput[0].value = minVal;
+      priceInput[1].value = maxVal;
+      progress.style.left = (minVal / rangeInput[0].max) * 100 + "%";
+      progress.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+
+    }
+  });
+});
 
 ///CSS for "Looking for" in Editprofile.css
 
 ///figure out why read receipt isnt centered
-
+// onChange={(e) => setValue(e.target.value)}
 export default Settings;

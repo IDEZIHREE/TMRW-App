@@ -97,13 +97,13 @@ input[name = "pDetail"]:focus {
   font-family:sans-serif;
   font-weight: normal;
 }
-
 .tags-info {
   font-size: 80%;
   color: grey;
   font-family: 'Courier New', Courier, monospace;
   padding: 6px 15px;
 }
+
 
 /* Extra About Me */
 .extra-about-me {
@@ -582,6 +582,16 @@ label span {
 	height: 1rem;
 	border: 1px solid #727272;
 	border-radius: 3px;
+}
+
+
+.extra-about-me-info {
+  font-size: 80%;
+  color: grey;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 10px 15px;
+  padding-bottom: 20px;
+  align-items: center;
 }
 
 /* Look at how to re css "label" because it messes with labels at the top too */

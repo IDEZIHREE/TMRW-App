@@ -1,16 +1,35 @@
-import { React,useState} from "react";
-import "./Footer.css";
+import { React, useState } from "react";
+import "./Premium.css";
+import Header from './Header';
+import "./Footer";
+import { Link } from "react-router-dom";
+//Icons
 import NightlightRoundedIcon from '@mui/icons-material/NightlightRounded';
 import { IconButton } from "@mui/material";
 import PersonIcon from '@mui/icons-material/Person';
 import QuestionAnswerRoundedIcon from '@mui/icons-material/QuestionAnswerRounded';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import { Link } from "react-router-dom";
+
+function Premium () {
+    return (
+        <div>
+            <Header />
+            <h1 className="temp-title">TMRW Plus coming Soon</h1>
+
+
+
+
+
+            <Footer />
+        </div>
+    )
+};
+
 
 function Footer() {
 
-    const [isActive, setIsActive] = useState(true);
-    const [isActive1, setIsActive1] = useState(false);
+    const [isActive, setIsActive] = useState(false);
+    const [isActive1, setIsActive1] = useState(true);
     const [isActive2, setIsActive2] = useState(false);
     const [isActive3, setIsActive3] = useState(false);
 
@@ -53,7 +72,6 @@ function Footer() {
             </Link>
             </IconButton>
             <IconButton>
-            <Link to="/premium">
                 <FavoriteIcon 
                     style={{
                         color: isActive1 ? '#FF5349' : '',
@@ -61,7 +79,6 @@ function Footer() {
                     className="titleIcon"
                     onClick={handleClick1} 
                     fontSize="large" />
-            </Link>
             </IconButton>
             <IconButton>
             <Link to="/chat">
@@ -89,4 +106,4 @@ function Footer() {
     )
 }
 
-export default Footer;
+export default Premium;

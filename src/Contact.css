@@ -2,6 +2,7 @@
     padding: 8px;
     color: #ff5349;
     align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .email-words {
@@ -11,13 +12,14 @@
     border-bottom: 1px solid rgb(56, 56, 56);
     align-items: center;
     font-weight: normal;
-    font-size: 125%;
+    font-size: 150%;
     font-family: sans-serif;
 }
 .contact-us {
     padding: 8px;
     color: #ff5349;
     align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .contact-categories {
     padding: 2px 15px;
