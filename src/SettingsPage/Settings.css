@@ -198,6 +198,7 @@ input[type="range"]::-moz-range-thumb{
   font-family: sans-serif;
 }
 .read-receipt {
+  display: flex;
   padding: 8px 10px;
   background-color: #121212;
   color: white;
@@ -210,6 +211,18 @@ input[type="range"]::-moz-range-thumb{
 }
 .toggle {
   cursor: pointer;
+}
+.Light-Mode {
+  display: flex;
+  padding: 8px 10px;
+  background-color: #121212;
+  color: white;
+  border: none;
+  max-width: 100%;
+  font-size: 1rem;
+  font-family:sans-serif;
+  border-bottom: 1px solid rgb(56, 56, 56);
+  padding-bottom: 10px;
 }
 /* Outer circle for switch */
 .toggle-switch {

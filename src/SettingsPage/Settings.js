@@ -122,7 +122,12 @@ function Settings () {
                       <Link to="blocked">
                         <button className="button open-button">Blocked Contacts <NavigateNextIcon /></button> 
                       </Link>
-                        <button className="button open-button">Languages <NavigateNextIcon /></button> 
+                      <div className="Light-Mode">Light Mode On/Off
+                        <label className="toggle">
+                            <input className="toggle-checkbox" type="checkbox" />
+                            <div className="toggle-switch"></div>
+                          </label>
+                      </div> 
                         <button className="button open-button">Languages <NavigateNextIcon /></button> 
                     <br></br> 
                       <div className="Legal">

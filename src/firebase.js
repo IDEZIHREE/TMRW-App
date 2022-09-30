@@ -1,9 +1,10 @@
-import firebase from 'firebase';
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBXTH--tr1aKodJOeyGili22HrGb3pADv4",
   authDomain: "tmrw-app-24cdb.firebaseapp.com",
-  databaseURL: "https://tmrw-app-24cdb.firebase.io.com/",
   projectId: "tmrw-app-24cdb",
   storageBucket: "tmrw-app-24cdb.appspot.com",
   messagingSenderId: "178598924638",
@@ -11,7 +12,10 @@ const firebaseConfig = {
   measurementId: "G-LPRJ7G1570"
 };
 
-const firebaseApp = firebase.initializeApp(firebaseConfig)
-const database = firebaseApp.firestore();
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+const Auth = getAuth(app);
 
-export default database;
+
+export default db;

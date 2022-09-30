@@ -3,6 +3,7 @@ import "./Editprofile.css"
 import "../Popup";
 import "../Popup.css";
 import { Link } from "react-router-dom";
+//import db from "../firebase";
 //Header Icon
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import { IconButton } from "@mui/material";
@@ -24,12 +25,22 @@ import GavelIcon from '@mui/icons-material/Gavel';
 import FlightIcon from '@mui/icons-material/Flight';
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 //Buttons
-import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
 
+//const contactForm = document.querySelector(".contact-form");
+//const fullName = document.querySelector(".full-name");
+//const submit = document.querySelector(".submit-form");
 
+//submit.addEventListener('click', (e) => {
+  //e.preventDefault();
+  //db.collection('contact-form').doc().set({
+    //fullName: fullName.value,
+  //}).then(() => {
+    //contactForm.reset();
+  //})
+//});
 function Editprofile () {
-    
+   
     return (
         <div>
             <div className="header_style">
@@ -48,13 +59,15 @@ function Editprofile () {
               </div>
             </div>
             <div>
-                <form action="/action_page.php">
-                    <div class="container">
+                <form className="contact-form">
+                  <input type="text" className="full-name" placeholder="Your Name..."></input>
+                  <button className="btn submit-form"> Submit to Firebase</button>
+                    <div className="container">
                         <div className="personal_details">
                           <label for="About Me"><h4 className="container_titles">My bio</h4></label>
                         </div>
                         <div className="about_me_bio">
-                          <input className="about_me_input" type="text" placeholder="Write a fun introduction about yourself" name="about" id="about me" required>
+                          <input className="about_me_input" type="text" placeholder="Write a fun introduction about yourself" name="about" id="about me" >
                           </input>
                         </div>
                         <div className="personal_details">
@@ -62,17 +75,17 @@ function Editprofile () {
                         </div>
                         <div className="about_me_q">
                           <label for="Hometown"><HouseIcon /></label>
-                            <input type="text" placeholder="Enter Hometown" name="pDetail" id="Hometown" required>
+                            <input type="text" placeholder="Enter Hometown" name="pDetail" id="Hometown" >
                             </input> 
                         </div>
                         <div className="about_me_q">
                           <label for="work"><WorkIcon /></label>
-                            <input type="text" placeholder="Where do you work" name="pDetail" id="work" required>
+                            <input type="text" placeholder="Where do you work" name="pDetail" id="work" >
                             </input>   
                         </div>
                         <div className="about_me_q">
                           <label for="education"><SchoolIcon /></label>
-                            <input type="text" placeholder="where do you go to school?" name="pDetail" id="education" required>
+                            <input type="text" placeholder="where do you go to school?" name="pDetail" id="education" >
                             </input>   
                         </div>
                     </div>
@@ -90,7 +103,7 @@ function Editprofile () {
                 <h1 className="extra-about-me">Extra About Me</h1>
                 <div className="Exercise-dropdown">
                     <details className="custom-select">
-                      <summary className="options"><FitnessCenterIcon className="extrapage-logos"/>
+                      <summary className="options"><FitnessCenterIcon className="extrapage-logos" />
                         <input type="radio" name="Exercise" id="Exercise" title="Exercise" checked />
                         <input type="radio" name="Workout" id="Gym Rat" title="Gym Rat" />
                         <input type="radio" name="Workout" id="3-4 times a week" title="3-4 times a week" />
@@ -118,8 +131,8 @@ function Editprofile () {
                   </div>
                   <div className="gender-dropdown">
                     <details className="custom-select">
-                      <summary className="options"> <EmojiPeopleIcon className="extrapage-logos"/>
-                        <input type="radio" name="Gender" id="Gender" title="Gender" checked />
+                      <summary className="options"> <EmojiPeopleIcon className="extrapage-logos" checked/>
+                        <input type="radio" name="Gender" id="Gender" title="Gender" />
                         <input type="radio" name="gen" id="Male" title="Male" />
                         <input type="radio" name="gen" id="Female" title="Female" />
                       </summary>
@@ -139,7 +152,7 @@ function Editprofile () {
                   <div className="sexual-orientation-dropdown">
                     <details className="custom-select">
                       <summary className="radios"><WhatshotIcon className="extrapage-logos" />
-                        <input type="radio" name="Sexual Orientation" id="Sexual Orientation" title="Sexual Orientation" checked />
+                        <input type="radio" name="Sexual Orientation" id="Sexual Orientation" title="Sexual Orientation" />
                         <input type="radio" name="sexualO" id="Straight" title="Straight" />
                         <input type="radio" name="sexualO" id="Gay" title="Gay" />
                         <input type="radio" name="sexualO" id="Bisexual" title="Bisexual" />
@@ -168,7 +181,7 @@ function Editprofile () {
                   <div className="smoking-dropdown">
                     <details className="custom-select">
                       <summary className="options"><SmokingRoomsIcon className="extrapage-logos"/>
-                        <input type="radio" name="Smoking" id="Smoking" title="Smoking" checked />
+                        <input type="radio" name="Smoking" id="Smoking" title="Smoking" />
                         <input type="radio" name="smoke" id="Chain Smoker" title="Chain Smoker" />
                         <input type="radio" name="smoke" id="A couple times a week" title="A couple times a week" />
                         <input type="radio" name="smoke" id="On special occasions" title="On special occasions" />
@@ -200,7 +213,7 @@ function Editprofile () {
                   <div className="Drinking-dropdown">
                     <details className="custom-select">
                       <summary className="options"><LiquorIcon className="extrapage-logos"/>
-                        <input type="radio" name="Drinking" id="Drinking" title="Drinking" checked />
+                        <input type="radio" name="Drinking" id="Drinking" title="Drinking"  />
                         <input type="radio" name="drink" id="Binge Drinker" title="Binge Drinker" />
                         <input type="radio" name="drink" id="A few times a week" title="A few times a week" />
                         <input type="radio" name="drink" id="Mostly weekends" title="Mostly weekends" />
@@ -232,7 +245,7 @@ function Editprofile () {
                   <div className="zodiac-dropdown">
                     <details className="custom-select">
                       <summary className="options"> <AutoAwesomeIcon className="extrapage-logos"/>
-                        <input type="radio" name="Zodiac Sign" id="Zodiac Sign" title="Zodiac Sign" checked />
+                        <input type="radio" name="Zodiac Sign" id="Zodiac Sign" title="Zodiac Sign"/>
                         <input type="radio" name="Zodiac" id="Aries" title="Aries" />
                         <input type="radio" name="Zodiac" id="Taurus" title="Taurus" />
                         <input type="radio" name="Zodiac" id="Gemini" title="Gemini" />
@@ -291,7 +304,7 @@ function Editprofile () {
                     </details>
                   </div>
                   <div>
-                    <input type="radio" name="religion" id="rel" title="" checked />
+                    <input type="radio" name="religion" id="rel" title="" />
                     <Link to="religion">
                         <button className="religion-button"><ChurchIcon className="extrapage-logos" />Religion </button>
                        
@@ -300,7 +313,7 @@ function Editprofile () {
                   <div className="Pets-dropdown">
                     <details className="custom-select">
                       <summary className="options"> <PetsIcon className="extrapage-logos"/>
-                        <input type="radio" name="Pets" id="Pets" title="Pets" checked />
+                        <input type="radio" name="Pets" id="Pets" title="Pets" />
                         <input type="radio" name="Pet" id="Animal Lover" title="Animal Lover" />
                         <input type="radio" name="Pet" id="Dog Person" title="Dog Person" />
                         <input type="radio" name="Pet" id="Cat Person" title="Cat Person" />
@@ -328,7 +341,7 @@ function Editprofile () {
                   <div className="Kids-dropdown">
                     <details className="custom-select">
                       <summary className="options"> <ChildFriendlyIcon className="extrapage-logos"/>
-                        <input type="radio" name="Kids" id="Kids" title="Kids" checked />
+                        <input type="radio" name="Kids" id="Kids" title="Kids" />
                         <input type="radio" name="Kid" id="I Want Kids" title="I Want Kids" />
                         <input type="radio" name="Kid" id="Not Even Thinking About It" title="Not Even Thinking About It" />
                         <input type="radio" name="Kid" id="I Have Kids" title="I Have Kids" />
@@ -352,7 +365,7 @@ function Editprofile () {
                   <div className="Political-dropdown">
                     <details className="custom-select">
                       <summary className="options"> <GavelIcon className="extrapage-logos"/>
-                        <input type="radio" name="Political Views" id="Political Views" title="Political Views" checked />
+                        <input type="radio" name="Political Views" id="Political Views" title="Political Views" />
                         <input type="radio" name="Politics" id="Republican" title="Republican" />
                         <input type="radio" name="Politics" id="Democratic" title="Democratic" />
                         <input type="radio" name="Politics" id="No Opinion" title="No Opinion" />
@@ -376,7 +389,7 @@ function Editprofile () {
                   <div className="Travel-dropdown">
                     <details className="custom-select">
                       <summary className="options"> <FlightIcon className="extrapage-logos"/>
-                        <input type="radio" name="Travel" id="Travel" title="Travel" checked />
+                        <input type="radio" name="Travel" id="Travel" title="Travel"  />
                         <input type="radio" name="Trav" id="As Much as Possible" title="As Much as Possible" />
                         <input type="radio" name="Trav" id="When I Get The Chance" title="When I Get The Chance" />
                         <input type="radio" name="Trav" id="Once I Get Money" title="Once I Get Money" />
