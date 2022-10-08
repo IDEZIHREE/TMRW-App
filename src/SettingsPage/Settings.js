@@ -2,11 +2,10 @@ import "./Settings.css";
 import { Link } from "react-router-dom";
 import React from "react";
 //Header Icons
-import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
+import { IoIosArrowBack } from "react-icons/io";
 import { IconButton } from "@mui/material";
 //Button Icons
-import NavigateNextIcon from '@mui/icons-material/NavigateNext';
-
+import { MdNavigateNext } from "react-icons/md";
 
 function Settings () {
 
@@ -18,7 +17,7 @@ function Settings () {
               <div className="header_img">
                 <IconButton>
                   <Link to="/profile" >
-                    <NavigateBeforeIcon className="navigate-back" fontSize="large"/>
+                    <IoIosArrowBack className="navigate-back" fontSize="115%"/>
                   </Link>
                 </IconButton>
               </div>
@@ -26,7 +25,7 @@ function Settings () {
                 Settings
               </span>
               <div>
-                <NavigateBeforeIcon className="fake-back" fontSize="large"/>
+                <IoIosArrowBack className="fake-back" fontSize="115%"/>
               </div>
             </div>
             <div>
@@ -36,10 +35,10 @@ function Settings () {
                         <label for="Account Settigs"><h4 className="container_titles">Account Information</h4></label>
                       </div>
                       <Link to="email">
-                        <button className="button open-button">Email <NavigateNextIcon /></button>
+                        <button className="button open-button">Email <MdNavigateNext className="next-arrow" /></button>
                       </Link>
                       <Link to="Phonenumber">
-                        <button className="button open-button">Phone Number <NavigateNextIcon /></button>
+                        <button className="button open-button">Phone Number <MdNavigateNext className="next-arrow" /></button>
                       </Link>
                       <div className="account-settings-info">
                         <label for="Account Settigs Info"><b>By verifing a phone number and email it helps protect your account against possible threats.</b></label>
@@ -50,7 +49,7 @@ function Settings () {
                         <label for="Location Section"><h4 className="container_titles">Location</h4></label>
                       </div>
                       <Link to="location">
-                        <button className="button open-button">Location <NavigateNextIcon /></button>
+                        <button className="button open-button">Location <MdNavigateNext className="next-arrow" /></button>
                       </Link>
                       <div className="slider-body">
                         <div className="wrapper">
@@ -103,9 +102,9 @@ function Settings () {
                             </ul>
                           </details>
                         </div>
-                        <button className="button open-button">Age Range <NavigateNextIcon /></button>
+                        <button className="button open-button">Age Range <MdNavigateNext className="next-arrow" /></button>
                  
-                        <button className="button open-button">Languages <NavigateNextIcon /></button>
+                        <button className="button open-button">Languages <MdNavigateNext className="next-arrow" /></button>
                       <div className="preferences-info">
                         <label for="Preferences Info"><b>Add you preferences to find people that fit your liking.</b></label>
                       </div>
@@ -120,7 +119,7 @@ function Settings () {
                           </label>
                       </div>
                       <Link to="blocked">
-                        <button className="button open-button">Blocked Contacts <NavigateNextIcon /></button> 
+                        <button className="button open-button">Blocked Contacts <MdNavigateNext className="next-arrow" /></button> 
                       </Link>
                       <div className="Light-Mode">Light Mode On/Off
                         <label className="toggle">
@@ -128,29 +127,29 @@ function Settings () {
                             <div className="toggle-switch"></div>
                           </label>
                       </div> 
-                        <button className="button open-button">Languages <NavigateNextIcon /></button> 
+                        <button className="button open-button">Languages <MdNavigateNext className="next-arrow" /></button> 
                     <br></br> 
                       <div className="Legal">
                         <label for="Legal"><h4 className="container_titles">Legal</h4></label>
                       </div>
                       <Link to="TermsOfService">
-                        <button className="button open-button">Terms of Service <NavigateNextIcon /></button> 
+                        <button className="button open-button">Terms of Service <MdNavigateNext className="next-arrow" /></button> 
                       </Link>
                       <Link to="License">
-                        <button className="button open-button">License <NavigateNextIcon /></button>
+                        <button className="button open-button">License <MdNavigateNext className="next-arrow" /></button>
                       </Link>
                       <Link to="PrivacyPolicy">
-                        <button className="button open-button">Privacy Policy <NavigateNextIcon /></button>
+                        <button className="button open-button">Privacy Policy <MdNavigateNext className="next-arrow" /></button>
                       </Link>
                       <Link to="Cookies">
-                        <button className="button open-button">Cookies <NavigateNextIcon /></button> 
+                        <button className="button open-button">Cookies <MdNavigateNext className="next-arrow" /></button> 
                       </Link>
                     <br></br> 
                     
                       <div className="Contact">
                         <label for="Contact"><h4 className="container_titles">Contact Us</h4></label>
                       </div>
-                        <button className="button open-button">Contact Us <NavigateNextIcon /></button> 
+                        <button className="button open-button">Contact Us <MdNavigateNext className="next-arrow" /></button> 
                     </div>
                 </form>
             </div>

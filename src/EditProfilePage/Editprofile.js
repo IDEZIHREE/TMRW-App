@@ -5,40 +5,28 @@ import "../Popup.css";
 import { Link } from "react-router-dom";
 //import db from "../firebase";
 //Header Icon
-import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
+import { IoIosArrowBack } from "react-icons/io";
 import { IconButton } from "@mui/material";
 //Icons
-import SchoolIcon from '@mui/icons-material/School';
-import HouseIcon from '@mui/icons-material/House';
-import WorkIcon from '@mui/icons-material/Work';
-import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
-import EmojiPeopleIcon from '@mui/icons-material/EmojiPeople';
-import WhatshotIcon from '@mui/icons-material/Whatshot';
-import HeightIcon from '@mui/icons-material/Height';
-import SmokingRoomsIcon from '@mui/icons-material/SmokingRooms';
-import LiquorIcon from '@mui/icons-material/Liquor';
-import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
-import ChurchIcon from '@mui/icons-material/Church';
-import PetsIcon from '@mui/icons-material/Pets';
-import ChildFriendlyIcon from '@mui/icons-material/ChildFriendly';
-import GavelIcon from '@mui/icons-material/Gavel';
-import FlightIcon from '@mui/icons-material/Flight';
-import LocalOfferIcon from '@mui/icons-material/LocalOffer';
+import { AiFillTags } from "react-icons/ai";
+import { GiModernCity } from "react-icons/gi";
+import { RiSuitcaseFill } from "react-icons/ri";
+import { HiAcademicCap } from "react-icons/hi";
+import { CgGym } from "react-icons/cg";
+import { ImFire } from "react-icons/im";
+import { MdAccessibilityNew } from "react-icons/md";
+import { GiBodyHeight } from "react-icons/gi";
+import { MdSmokingRooms } from "react-icons/md";
+import { BiDrink } from "react-icons/bi";
+import { GiStarSwirl } from "react-icons/gi";
+import { GiChurch } from "react-icons/gi";
+import { MdPets } from "react-icons/md";
+import { MdStroller } from "react-icons/md";
+import { GiGavel } from "react-icons/gi";
+import { GiAirplaneDeparture } from "react-icons/gi";
 //Buttons
 
 
-//const contactForm = document.querySelector(".contact-form");
-//const fullName = document.querySelector(".full-name");
-//const submit = document.querySelector(".submit-form");
-
-//submit.addEventListener('click', (e) => {
-  //e.preventDefault();
-  //db.collection('contact-form').doc().set({
-    //fullName: fullName.value,
-  //}).then(() => {
-    //contactForm.reset();
-  //})
-//});
 function Editprofile () {
    
     return (
@@ -47,7 +35,7 @@ function Editprofile () {
               <div className="header_img">
                 <IconButton>
                   <Link to="/profile" >
-                    <NavigateBeforeIcon className="navigate-back" fontSize="large"/>
+                    <IoIosArrowBack className="navigate-back" fontSize="115%"/>
                   </Link>
                 </IconButton>
               </div>
@@ -55,13 +43,11 @@ function Editprofile () {
                 Edit Profile
               </span>
               <div>
-                <NavigateBeforeIcon className="fake-back" fontSize="large"/>
+                <IoIosArrowBack className="fake-back" fontSize="115%"/>
               </div>
             </div>
             <div>
-                <form className="contact-form">
-                  <input type="text" className="full-name" placeholder="Your Name..."></input>
-                  <button className="btn submit-form"> Submit to Firebase</button>
+            
                     <div className="container">
                         <div className="personal_details">
                           <label for="About Me"><h4 className="container_titles">My bio</h4></label>
@@ -74,23 +60,23 @@ function Editprofile () {
                           <label for="Personal Details"><h4 className="container_titles">Personal Details</h4></label>
                         </div>
                         <div className="about_me_q">
-                          <label for="Hometown"><HouseIcon /></label>
+                          <label for="Hometown"><GiModernCity className="pedetails-logos"/></label>
                             <input type="text" placeholder="Enter Hometown" name="pDetail" id="Hometown" >
                             </input> 
                         </div>
                         <div className="about_me_q">
-                          <label for="work"><WorkIcon /></label>
+                          <label for="work"><RiSuitcaseFill className="pedetails-logos"/></label>
                             <input type="text" placeholder="Where do you work" name="pDetail" id="work" >
                             </input>   
                         </div>
                         <div className="about_me_q">
-                          <label for="education"><SchoolIcon /></label>
+                          <label for="education"><HiAcademicCap className="pedetails-logos"/></label>
                             <input type="text" placeholder="where do you go to school?" name="pDetail" id="education" >
                             </input>   
                         </div>
                     </div>
-                </form>
-                <h1 className="Tags">Tags <LocalOfferIcon /></h1>
+         
+                <h1 className="Tags">Tags <AiFillTags /></h1>
                 <br></br>
                 <br></br>
                 <div>
@@ -103,7 +89,7 @@ function Editprofile () {
                 <h1 className="extra-about-me">Extra About Me</h1>
                 <div className="Exercise-dropdown">
                     <details className="custom-select">
-                      <summary className="options"><FitnessCenterIcon className="extrapage-logos" />
+                      <summary className="options"><CgGym className="extrapage-logos" />
                         <input type="radio" name="Exercise" id="Exercise" title="Exercise" checked />
                         <input type="radio" name="Workout" id="Gym Rat" title="Gym Rat" />
                         <input type="radio" name="Workout" id="3-4 times a week" title="3-4 times a week" />
@@ -131,7 +117,7 @@ function Editprofile () {
                   </div>
                   <div className="gender-dropdown">
                     <details className="custom-select">
-                      <summary className="options"> <EmojiPeopleIcon className="extrapage-logos" checked/>
+                      <summary className="options"> <MdAccessibilityNew className="extrapage-logos" checked/>
                         <input type="radio" name="Gender" id="Gender" title="Gender" />
                         <input type="radio" name="gen" id="Male" title="Male" />
                         <input type="radio" name="gen" id="Female" title="Female" />
@@ -151,7 +137,7 @@ function Editprofile () {
                   </div>
                   <div className="sexual-orientation-dropdown">
                     <details className="custom-select">
-                      <summary className="radios"><WhatshotIcon className="extrapage-logos" />
+                      <summary className="radios"><ImFire className="extrapage-logos" />
                         <input type="radio" name="Sexual Orientation" id="Sexual Orientation" title="Sexual Orientation" />
                         <input type="radio" name="sexualO" id="Straight" title="Straight" />
                         <input type="radio" name="sexualO" id="Gay" title="Gay" />
@@ -175,12 +161,12 @@ function Editprofile () {
                   </div>
                   <div>
                   <Link to="height">
-                      <button className="height-button"><HeightIcon className="extrapage-logos" />Height </button>
+                      <button className="height-button"><GiBodyHeight className="extrapage-logos" />Height </button>
                   </Link>
                   </div>
                   <div className="smoking-dropdown">
                     <details className="custom-select">
-                      <summary className="options"><SmokingRoomsIcon className="extrapage-logos"/>
+                      <summary className="options"><MdSmokingRooms  className="extrapage-logos"/>
                         <input type="radio" name="Smoking" id="Smoking" title="Smoking" />
                         <input type="radio" name="smoke" id="Chain Smoker" title="Chain Smoker" />
                         <input type="radio" name="smoke" id="A couple times a week" title="A couple times a week" />
@@ -212,7 +198,7 @@ function Editprofile () {
                   </div>
                   <div className="Drinking-dropdown">
                     <details className="custom-select">
-                      <summary className="options"><LiquorIcon className="extrapage-logos"/>
+                      <summary className="options"><BiDrink className="extrapage-logos"/>
                         <input type="radio" name="Drinking" id="Drinking" title="Drinking"  />
                         <input type="radio" name="drink" id="Binge Drinker" title="Binge Drinker" />
                         <input type="radio" name="drink" id="A few times a week" title="A few times a week" />
@@ -244,7 +230,7 @@ function Editprofile () {
                   </div>
                   <div className="zodiac-dropdown">
                     <details className="custom-select">
-                      <summary className="options"> <AutoAwesomeIcon className="extrapage-logos"/>
+                      <summary className="options"> <GiStarSwirl className="extrapage-logos"/>
                         <input type="radio" name="Zodiac Sign" id="Zodiac Sign" title="Zodiac Sign"/>
                         <input type="radio" name="Zodiac" id="Aries" title="Aries" />
                         <input type="radio" name="Zodiac" id="Taurus" title="Taurus" />
@@ -306,13 +292,13 @@ function Editprofile () {
                   <div>
                     <input type="radio" name="religion" id="rel" title="" />
                     <Link to="religion">
-                        <button className="religion-button"><ChurchIcon className="extrapage-logos" />Religion </button>
+                        <button className="religion-button"><GiChurch className="extrapage-logos" />Religion </button>
                        
                     </Link>
                   </div>
                   <div className="Pets-dropdown">
                     <details className="custom-select">
-                      <summary className="options"> <PetsIcon className="extrapage-logos"/>
+                      <summary className="options"> <MdPets className="extrapage-logos"/>
                         <input type="radio" name="Pets" id="Pets" title="Pets" />
                         <input type="radio" name="Pet" id="Animal Lover" title="Animal Lover" />
                         <input type="radio" name="Pet" id="Dog Person" title="Dog Person" />
@@ -340,7 +326,7 @@ function Editprofile () {
                   </div>
                   <div className="Kids-dropdown">
                     <details className="custom-select">
-                      <summary className="options"> <ChildFriendlyIcon className="extrapage-logos"/>
+                      <summary className="options"> <MdStroller className="extrapage-logos"/>
                         <input type="radio" name="Kids" id="Kids" title="Kids" />
                         <input type="radio" name="Kid" id="I Want Kids" title="I Want Kids" />
                         <input type="radio" name="Kid" id="Not Even Thinking About It" title="Not Even Thinking About It" />
@@ -364,7 +350,7 @@ function Editprofile () {
                   </div>
                   <div className="Political-dropdown">
                     <details className="custom-select">
-                      <summary className="options"> <GavelIcon className="extrapage-logos"/>
+                      <summary className="options"> <GiGavel className="extrapage-logos"/>
                         <input type="radio" name="Political Views" id="Political Views" title="Political Views" />
                         <input type="radio" name="Politics" id="Republican" title="Republican" />
                         <input type="radio" name="Politics" id="Democratic" title="Democratic" />
@@ -388,7 +374,7 @@ function Editprofile () {
                   </div>
                   <div className="Travel-dropdown">
                     <details className="custom-select">
-                      <summary className="options"> <FlightIcon className="extrapage-logos"/>
+                      <summary className="options"> <GiAirplaneDeparture className="extrapage-logos"/>
                         <input type="radio" name="Travel" id="Travel" title="Travel"  />
                         <input type="radio" name="Trav" id="As Much as Possible" title="As Much as Possible" />
                         <input type="radio" name="Trav" id="When I Get The Chance" title="When I Get The Chance" />
@@ -413,6 +399,7 @@ function Editprofile () {
                   <div className="extra-about-me-info">
                     <label for="Extra About Me Info"><b>By including more information in the extra about me section you show your matches some of your interests and beliefs.</b></label>
                   </div>
+                  <br></br>
             </div>
         </div>
     )

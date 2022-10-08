@@ -43,7 +43,7 @@
 }
 input[name = "about"] {
   padding-bottom: 50px;
-  border-radius: 25px;
+  border-radius: 15px;
   text-align: left;
   border: 1px solid white;
   width:100%;
@@ -86,7 +86,9 @@ input[name = "pDetail"]:focus {
   color: #FF5349;
   font-weight: normal;
 }
-
+.pedetails-logos{
+  font-size: 150%;
+}
 
 /* Tags Secion*/
 .Tags {
@@ -115,7 +117,8 @@ input[name = "pDetail"]:focus {
   font-weight: normal;
 }
 .extrapage-logos {
-  padding-right: 5px;
+  font-size: 150%;
+  padding-right: 8px;
   color:  rgb(117, 117, 117)
 }
 /* DropDown */

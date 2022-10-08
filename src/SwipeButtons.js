@@ -1,17 +1,18 @@
 import React from 'react';
-import { IconButton } from "@mui/material";
-import ReplayIcon from '@mui/icons-material/Replay';
-import FavoriteIcon from '@mui/icons-material/Favorite';
 import "./SwipeButtons.css";
+//Icons
+import { IconButton } from "@mui/material";
+import { MdOutlineReplay } from "react-icons/md";
+import { BsHeartFill } from "react-icons/bs";
 
 const SwipeButtons = () => {
     return (
         <div className="swipeButtons">
             <IconButton className="swipeButtons_repeat">
-                <ReplayIcon fontSize="large" />
+                <MdOutlineReplay fontSize="150%" />
             </IconButton>
             <IconButton className="swipeButtons_right">
-                <FavoriteIcon fontSize="large" />
+                <BsHeartFill fontSize="150%" />
             </IconButton>
         </div>
     );

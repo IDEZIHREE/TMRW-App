@@ -4,11 +4,11 @@ import Header from './Header';
 import "./Footer";
 import { Link } from "react-router-dom";
 //Icons
-import NightlightRoundedIcon from '@mui/icons-material/NightlightRounded';
 import { IconButton } from "@mui/material";
-import PersonIcon from '@mui/icons-material/Person';
-import QuestionAnswerRoundedIcon from '@mui/icons-material/QuestionAnswerRounded';
-import FavoriteIcon from '@mui/icons-material/Favorite';
+import { RiMoonFill } from "react-icons/ri";
+import { BsHeartFill } from "react-icons/bs";
+import { TiMessages } from "react-icons/ti";
+import { BsFillPersonFill } from "react-icons/bs";
 
 function Premium () {
     return (
@@ -62,44 +62,46 @@ function Footer() {
         <div className="footer">
             <IconButton>
             <Link to="/">
-                <NightlightRoundedIcon 
+                <RiMoonFill
                     style={{
                         color: isActive ? '#FF5349' : '',
                     }}
                     className="titleIcon"
                     onClick={handleClick} 
-                    fontSize="large" />
+                    fontSize="150%" />
             </Link>
             </IconButton>
             <IconButton>
-                <FavoriteIcon 
+            <Link to="/premium">
+                <BsHeartFill
                     style={{
                         color: isActive1 ? '#FF5349' : '',
                     }}
                     className="titleIcon"
                     onClick={handleClick1} 
-                    fontSize="large" />
+                    fontSize="150%" />
+            </Link >
             </IconButton>
             <IconButton>
             <Link to="/chat">
-                <QuestionAnswerRoundedIcon 
+                <TiMessages
                     style={{
                         color: isActive2 ? '#FF5349' : '',
                     }}
                     className="titleIcon"
                     onClick={handleClick2} 
-                    fontSize="large" />
+                    fontSize="150%" />
             </Link>
             </IconButton>
             <IconButton>
             <Link to="/profile">
-                <PersonIcon 
-                     style={{
+                <BsFillPersonFill
+                    style={{
                         color: isActive3 ? '#FF5349' : '',
                     }}
                     className="titleIcon"
                     onClick={handleClick3} 
-                    fontSize="large" />
+                    fontSize="150%" />
             </Link>
             </IconButton>
         </div>

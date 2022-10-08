@@ -47,6 +47,9 @@
 .open-button:hover {
   background-color: rgb(34, 34, 34);
 }
+.next-arrow {
+  font-size: 135%;
+}
 
 /* Account Settings */
 .account-settings {

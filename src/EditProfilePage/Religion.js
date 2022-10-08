@@ -2,10 +2,10 @@ import React from "react";
 import "./Religion.css";
 import { Link } from "react-router-dom";
 //Header Icons
-import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
-import { IconButton } from "@mui/material";
+import { IoIosArrowBack } from "react-icons/io";
 //Icons
-import ChurchIcon from '@mui/icons-material/Church';
+import { IconButton } from "@mui/material";
+import { GiChurch } from "react-icons/gi";
 
 function Religion () {
     return (
@@ -14,7 +14,7 @@ function Religion () {
             <div className="header_img">
                 <IconButton>
                 <Link to="/profile/editprofile" >
-                    <NavigateBeforeIcon className="navigate-back" fontSize="large"/>
+                    <IoIosArrowBack className="navigate-back" fontSize="115%"/>
                 </Link>
                 </IconButton>
             </div>
@@ -22,13 +22,13 @@ function Religion () {
                 Religion
             </span>
             <div>
-                <NavigateBeforeIcon className="fake-back" fontSize="large"/>
+                <IoIosArrowBack className="fake-back" fontSize="115%"/>
             </div>
             </div>
             <form action="/action_page.php">
                 <div className="email_page">
                     <div className="email_info">
-                        <label for="work"><ChurchIcon fontSize="large" /></label>
+                        <label for="work"><GiChurch fontSize="150%" /></label>
                             <input type="text" placeholder="Enter your Religion" name="pDetail" id="work" required>
                             </input>   
                     </div>

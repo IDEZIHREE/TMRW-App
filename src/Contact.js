@@ -2,7 +2,7 @@ import React from "react";
 import "./Contact.css";
 import { Link } from "react-router-dom";
 //Header Icons
-import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
+import { IoIosArrowBack } from "react-icons/io";
 import { IconButton } from "@mui/material";
 
 function Contact () {
@@ -12,7 +12,7 @@ function Contact () {
             <div className="header_img">
                 <IconButton>
                 <Link to="/profile" >
-                    <NavigateBeforeIcon className="navigate-back" fontSize="large"/>
+                    <IoIosArrowBack className="navigate-back" fontSize="115%"/>
                 </Link>
                 </IconButton>
             </div>
@@ -20,7 +20,7 @@ function Contact () {
                 Contact Us
             </span>
             <div>
-                <NavigateBeforeIcon className="fake-back" fontSize="large"/>
+                <IoIosArrowBack className="fake-back" fontSize="115%"/>
             </div>
             </div>
             <div className="contact-email">

@@ -1,8 +1,9 @@
 import React from "react";
-import { IconButton } from "@mui/material";
 import "./Header.css";
 import { Link } from "react-router-dom";
-import FilterListRoundedIcon from '@mui/icons-material/FilterListRounded';
+//Icons
+import { IconButton } from "@mui/material";
+import { MdFilterList } from "react-icons/md";
 
 function Header() {
 
@@ -10,12 +11,12 @@ function Header() {
        <div>
             <div className="header">
             <div>
-                <FilterListRoundedIcon className="FakeHeaderIcon" fontSize="large" />
+                <MdFilterList className="FakeHeaderIcon" fontSize="150%" />
             </div>
                 <h1 className="Title">tmrw</h1>
                 <IconButton>
                 <Link to="/filters">
-                    <FilterListRoundedIcon className="HeaderIcon" fontSize="large" />
+                    <MdFilterList className="HeaderIcon" fontSize="150%" />
                 </Link>
                 </IconButton>
             </div>

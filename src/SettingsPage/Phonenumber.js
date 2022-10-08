@@ -2,10 +2,10 @@ import React from "react";
 import "./Phonenumber.css"
 import { Link } from "react-router-dom";
 //Header Icons
-import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
+import { IoIosArrowBack } from "react-icons/io";
 import { IconButton } from "@mui/material";
 //Button Icons
-import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
+import { GiVibratingSmartphone } from "react-icons/gi";
 
 function Phonenumber () {
     return (
@@ -14,7 +14,7 @@ function Phonenumber () {
             <div className="header_img">
                 <IconButton>
                 <Link to="/profile/settings" >
-                    <NavigateBeforeIcon className="navigate-back" fontSize="large"/>
+                    <IoIosArrowBack className="navigate-back" fontSize="115%"/>
                 </Link>
                 </IconButton>
             </div>
@@ -22,13 +22,13 @@ function Phonenumber () {
                 Phone Number
             </span>
             <div>
-                <NavigateBeforeIcon className="fake-back" fontSize="large"/>
+                <IoIosArrowBack className="fake-back" fontSize="115%"/>
             </div>
             </div>
             <form action="/action_page.php">
                 <div className="phonenumber_page">
                     <div className="phonenumber_info">
-                        <label for="work"><PhoneIphoneIcon fontSize="large"/></label>
+                        <label for="work"><GiVibratingSmartphone fontSize="150%"/></label>
                             <input type="text" placeholder="Enter your Phone Number" name="pDetail" id="work" required>
                             </input>   
                     </div>
