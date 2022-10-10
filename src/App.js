@@ -1,6 +1,5 @@
 import React from 'react';
 import { Routes, Route } from "react-router-dom";
-import Signin from "./Signin";
 import './App.css';
 import TinderCardsNew from './TinderCardsNew';
 import SwipeButtons from './SwipeButtons';
@@ -17,7 +16,7 @@ import Email from "./SettingsPage/Email";
 import Phonenumber from "./SettingsPage/Phonenumber";
 import Location from "./SettingsPage/Location";
 import Blocked from "./SettingsPage/Blocked";
-    //Legal
+//Legal
 import TermsOfService from "./SettingsPage/LegalFolder/TOS";
 import License from "./SettingsPage/LegalFolder/License";
 import PrivacyPolicy from "./SettingsPage/LegalFolder/PrivacyPolicy";
@@ -26,8 +25,11 @@ import Cookies from "./SettingsPage/LegalFolder/Cookies";
 import Editprofile from './EditProfilePage/Editprofile';
 import Religion from "./EditProfilePage/Religion";
 import Height from "./EditProfilePage/Height";
-
-
+//SignUp
+import SigninName from './SigninName';
+import SigninDOB from "./SigninDOB";
+import SigninGender from "./SigninGender";
+import SigninEmailPassword from "./SigninEmailPassword";
 
 function App() {
   return (
@@ -38,8 +40,11 @@ function App() {
         <Route path="chat" element={<CPreview />} />
         <Route path="chat/:person" element={<Messages />} />
         <Route path="profile" element={<ProfilePage />} />
-        <Route path="/signin" element={<SignInPage />} />
         <Route path="/filters" element={<FiltersPage />} />
+        <Route path="SigninEmailPassword" element={<SignupEmailPassword />} />
+        <Route path="SigninName" element={<SignupName/>} />
+        <Route path="SigninDOB" element={<SignupDOB/>} />
+        <Route path="SigninGender" element={<SignupGender />} />
         <Route path="profile/settings" element={<SettingsPage />} />
         <Route path="profile/settings/email" element={<EmailPage />} />
         <Route path="profile/settings/phonenumber" element={<PhoneNumberPage />} />
@@ -73,17 +78,39 @@ function PremiumPage (){
     </main>
   );
 }
-function SignInPage () {
-  return (
-    <main>
-      <Signin />
-    </main>
-  );
-}
 function FiltersPage () {
   return (
     <main>
       <Filters />
+    </main>
+  );
+}
+//SignUP
+function SignupEmailPassword () {
+  return (
+    <main>
+      <SigninEmailPassword />
+    </main>
+  );
+}
+function SignupName () {
+  return (
+    <main>
+      <SigninName />
+    </main>
+  );
+}
+function SignupDOB () {
+  return (
+    <main>
+      <SigninDOB />
+    </main>
+  );
+}
+function SignupGender () {
+  return (
+    <main>
+      <SigninGender />
     </main>
   );
 }

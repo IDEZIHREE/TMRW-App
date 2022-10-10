@@ -1,0 +1,64 @@
+.progress-DOB {
+    background: rgba(255, 255, 255, 0.1);
+    justify-content: flex-start;
+    border-radius: 50px;
+    align-items: center;
+    position: relative;
+    padding: 0 5px;
+    display: flex;
+    height: 10px;
+    width: 100%;
+}
+.progress-valueDOB {
+    animation: load 3s normal forwards;
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 50px;
+    background: linear-gradient(45deg,white 5%,#FF5349 60%);
+    height: 5px;
+    width: 0;
+}
+@keyframes load {
+    0% { width: 0;}
+    100% {width: 68%;}
+}
+.myDOB{
+    padding-top: 150px;
+    color: #FF5349;
+    font-size: 250%;
+    padding-left: 50px;
+}
+
+
+
+
+
+
+
+.DOB-info {
+    padding-left: 50px;
+    padding-top: 25px;
+    font-size: 80%;
+    color: grey;
+    font-family: 'Courier New', Courier, monospace;
+}
+.continue-button-dob {
+    display: block;
+    position: relative;
+    text-align: center;
+    margin: auto;
+    margin-top: 10%;
+    width: 75%;
+    height: 6vh;
+    background-color: #FF5349;
+    cursor: pointer;
+    border: none;
+    font-size: large;
+    font-family: sans-serif;
+    border-radius: 15px;
+    box-shadow: 1px 3px 15px 2px rgb(0, 0, 0);
+}
+
+.continue-button-dob:hover {
+    background-color: #fa473d;
+    transition-duration: 167ms;
+}

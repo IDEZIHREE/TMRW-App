@@ -11,6 +11,7 @@ import { RiMoonFill } from "react-icons/ri";
 import { BsHeartFill } from "react-icons/bs";
 import { TiMessages } from "react-icons/ti";
 import { BsFillPersonFill } from "react-icons/bs";
+import { CircularProgressbarWithChildren } from "react-circular-progressbar";
 
 
 
@@ -55,11 +56,11 @@ function Profile ({ profilePic, name, age }) {
             <button className="button end-account"> Yes delete my account </button>
             </Link>
                 </dialog>
-
         <Footer />
         </div>
     );
 };
+
 //Link delete button to sign in page
 function ProfileInformations () {
     return (

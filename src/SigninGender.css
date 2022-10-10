@@ -1,0 +1,103 @@
+.progress-gender {
+    background: rgba(255, 255, 255, 0.1);
+    justify-content: flex-start;
+    border-radius: 50px;
+    align-items: center;
+    position: relative;
+    padding: 0 5px;
+    display: flex;
+    height: 10px;
+    width: 100%;
+}
+.progress-valuegender {
+    animation: load 3s normal forwards;
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 50px;
+    background: linear-gradient(45deg,white 5%,#FF5349 60%);
+    height: 5px;
+    width: 0;
+}
+@keyframes load {
+    0% { width: 0;}
+    100% {width: 68%;}
+}
+
+.myGender{
+    padding-top: 75px;
+    color: #FF5349;
+    font-size: 250%;
+    padding-left: 50px;
+}
+.lookingforGender{
+    padding-top: 75px;
+    color: #FF5349;
+    font-size: 250%;
+    padding-left: 50px;
+}
+
+.myGender-option {
+    margin: auto;
+    align-items: center;
+    display: block;
+    margin-top: 5%;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 1px 3px 15px 2px rgb(0, 0, 0);
+    font-size: large;
+    font-family: sans-serif;
+    width: 40%;
+    height: 4vh;
+    background-color: lightgrey;
+}
+.myGender-option:focus{
+    background-color: gray;
+    transition-duration: 167ms;
+}
+.lookingfor-option {
+    margin: auto;
+    align-items: center;
+    display: block;
+    justify-content: space-between;
+    margin-top: 5%;
+    width: 40%;
+    height: 4vh;
+    cursor: pointer;
+    border: none;
+    font-size: large;
+    font-family: sans-serif;
+    border-radius: 15px;
+    box-shadow: 1px 3px 15px 2px rgb(0, 0, 0);
+    background-color: lightgray;
+}
+.lookingfor-option:focus{
+    background-color: gray;
+    transition-duration: 167ms;
+}
+.lookingfor-info {
+    padding-left: 50px;
+    padding-top: 25px;
+    color: gray;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 80%;
+}
+.continue-button-gender {
+    display: block;
+    position: relative;
+    text-align: center;
+    margin: auto;
+    margin-top: 20%;
+    width: 75%;
+    height: 6vh;
+    background-color: #FF5349;
+    cursor: pointer;
+    border: none;
+    font-size: large;
+    font-family: sans-serif;
+    border-radius: 15px;
+    box-shadow: 1px 3px 15px 2px rgb(0, 0, 0);
+}
+.continue-button-gender:hover {
+    background-color: #fa473d;
+    transition-duration: 167ms;
+}

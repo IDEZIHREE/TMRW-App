@@ -81,7 +81,7 @@ function Editprofile () {
                 <br></br>
                 <div>
                   <div className="tags-info">
-                    <label for="Tags Info"><b>By adding tags to your account you can show others your interests at a glance.</b></label>
+                    <div for="Tags Info"><b>By adding tags to your account you can show others your interests at a glance.</b></div>
                   </div>
                 </div>
                 <br></br>
